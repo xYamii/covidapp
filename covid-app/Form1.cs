@@ -22,6 +22,7 @@ namespace covid_app
         public Form1()
         {
             InitializeComponent();
+            this.dane_panelu();
             if (!this.isActual())
             {
 
@@ -116,6 +117,21 @@ namespace covid_app
 
                 }
             }
+        }
+
+        private void dane_panelu()
+        {
+            WebRequest wrGETURL = WebRequest.Create(this.APIUrl);
+            wrGETURL.Method = "GET";
+            Stream objStream = wrGETURL.GetResponse().GetResponseStream();
+            StreamReader objReader = new StreamReader(objStream);
+            string sLine = "";
+            sLine = objReader.ReadLine();
+            JObject json = JObject.Parse(sLine);
+            testy_panel_label.Text = json["today"]["tests"]["tests"]["all"].ToString();
+            zakazenia_panel_label.Text = json["today"]["tests"]["infections"].ToString();
+            zgony_panel_label.Text = json["today"]["tests"]["deaths"]["deaths"].ToString();
+            szczepienia_panel_label.Text = json["today"]["vaccinations"]["vaccinations"].ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
