@@ -24,13 +24,13 @@ namespace covid_app
             InitializeComponent();
             if (!this.isActual())
             {
-                MessageBox.Show("tak xd");
+
                 this.getAcutalData();
             };
         }
         private bool isActual()
         {
-            string sql = "SELECT top 1 FORMAT(data, 'dd/MM/yyyy') as data from Szczepienia order by data desc";
+            string sql = "SELECT top 1 FORMAT(data, 'dd.MM.yyyy') as data from Szczepienia order by id desc";
             SqlCommand sqlquery = this.con.CreateCommand();
             this.con.Open();
             sqlquery.CommandText = sql;
@@ -43,10 +43,11 @@ namespace covid_app
                 if (dt.Rows.Count > 0)
                 {
                     DataRow row = dt.Rows[0];
-                    string localDate = DateTime.Today.ToString("dd/MM/yyyy");
+                    string localDate = DateTime.Today.ToString("dd.MM.yyyy");
                     this.con.Close();
                     label_dashboard_data.Text = row["data"].ToString();
-
+                    MessageBox.Show("row data: " + row["data"]);
+                    MessageBox.Show("aktualne data: " + localDate);
                     if (row["data"].ToString() == localDate)
                     {
                         return true;
@@ -89,8 +90,9 @@ namespace covid_app
 
                     this.con.Open();
                     SqlCommand sqlquery = this.con.CreateCommand();
+
                     sqlquery.CommandText = "insert into dbo.[Szczepienia] (data,wszystkie,pierwsza_dawka,druga_dawka) VALUES(@dzisiejsza_data,@wszystkie_dawki,@pierwsza_dawka,@druga_dawka)";
-                    sqlquery.Parameters.AddWithValue("@dzisiejsza_data", json["reportDate"].ToString());
+                    sqlquery.Parameters.AddWithValue("@dzisiejsza_data", DateTime.Parse(json["reportDate"].ToString()));
                     sqlquery.Parameters.AddWithValue("@wszystkie_dawki", json["today"]["vaccinations"]["vaccinations"].ToString());
                     sqlquery.Parameters.AddWithValue("@pierwsza_dawka", json["today"]["vaccinations"]["firstDoses"].ToString());
                     sqlquery.Parameters.AddWithValue("@druga_dawka", json["today"]["vaccinations"]["secondDoses"].ToString());
@@ -98,14 +100,14 @@ namespace covid_app
                     sqlquery.Parameters.Clear();
 
                     sqlquery.CommandText = "insert into dbo.[Testy] (data, wszystkie, pozytywne) VALUES (@dzisiejsza_data, @wszystkie_testy, @pozytywne_testy)";
-                    sqlquery.Parameters.AddWithValue("@dzisiejsza_data", json["reportDate"].ToString());
+                    sqlquery.Parameters.AddWithValue("@dzisiejsza_data", DateTime.Parse(json["reportDate"].ToString()));
                     sqlquery.Parameters.AddWithValue("@wszystkie_testy", json["today"]["tests"]["tests"]["all"].ToString());
                     sqlquery.Parameters.AddWithValue("@pozytywne_testy", json["today"]["tests"]["tests"]["positive"].ToString());
                     sqlquery.ExecuteNonQuery();
                     sqlquery.Parameters.Clear();
 
                     sqlquery.CommandText = "insert into dbo.[Zakazenia] (data,nowe_zakazenia,nowe_zgony,ozdrowiency) VALUES(@dzisiejsza_data,@nowe_zakazenia,@nowe_zgony,@ozdrowiency)";
-                    sqlquery.Parameters.AddWithValue("@dzisiejsza_data", json["reportDate"].ToString());
+                    sqlquery.Parameters.AddWithValue("@dzisiejsza_data", DateTime.Parse(json["reportDate"].ToString()));
                     sqlquery.Parameters.AddWithValue("@nowe_zakazenia", json["today"]["tests"]["infections"].ToString());
                     sqlquery.Parameters.AddWithValue("@nowe_zgony", json["today"]["tests"]["deaths"]["deaths"].ToString());
                     sqlquery.Parameters.AddWithValue("@ozdrowiency", json["today"]["tests"]["recovered"].ToString());
