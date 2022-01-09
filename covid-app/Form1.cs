@@ -15,9 +15,9 @@ using Newtonsoft.Json.Linq;
 
 namespace covid_app
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+    public partial class Form1 : Form
     {
-        private SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\yamster\source\repos\covid-app\covid-app\Database1.mdf;Integrated Security=True");
+        private SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..")) + @"\Database1.mdf; Integrated Security = True;");
         private string APIUrl = "https://koronawirus-api.herokuapp.com/api/covid-vaccinations-tests/daily";
         public Form1()
         {
@@ -45,6 +45,7 @@ namespace covid_app
                     DataRow row = dt.Rows[0];
                     string localDate = DateTime.Today.ToString("dd/MM/yyyy");
                     this.con.Close();
+                    label_dashboard_data.Text = row["data"].ToString();
 
                     if (row["data"].ToString() == localDate)
                     {
@@ -88,7 +89,6 @@ namespace covid_app
 
                     this.con.Open();
                     SqlCommand sqlquery = this.con.CreateCommand();
-
                     sqlquery.CommandText = "insert into dbo.[Szczepienia] (data,wszystkie,pierwsza_dawka,druga_dawka) VALUES(@dzisiejsza_data,@wszystkie_dawki,@pierwsza_dawka,@druga_dawka)";
                     sqlquery.Parameters.AddWithValue("@dzisiejsza_data", json["reportDate"].ToString());
                     sqlquery.Parameters.AddWithValue("@wszystkie_dawki", json["today"]["vaccinations"]["vaccinations"].ToString());
@@ -114,6 +114,64 @@ namespace covid_app
 
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void minimize_button_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void exit_button_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
+        }
+
+        private void dashboard_button_Click(object sender, EventArgs e)
+        {
+            pages.SelectedTab = panel_page;
+            dashboard_button.Focus();
+        }
+
+        private void testy_button_Click(object sender, EventArgs e)
+        {
+            pages.SelectedTab = testy_page;
+            testy_button.Focus();
+
+        }
+
+        private void zakazenia_button_Click(object sender, EventArgs e)
+        {
+            pages.SelectedTab = zakazenia_page;
+            zakazenia_button.Focus();
+        }
+
+        private void szczepienia_button_Click(object sender, EventArgs e)
+        {
+            pages.SelectedTab = szczepienia_page;
+            szczepienia_button.Focus();
+        }
+
+        private void zgony_button_Click(object sender, EventArgs e)
+        {
+            pages.SelectedTab = zgony_page;
+            zgony_button.Focus();
+        }
+
+        private void mapa_button_Click(object sender, EventArgs e)
+        {
+            pages.SelectedTab = mapa_page;
+            mapa_button.Focus();
+        }
+
+        private void autorzy_button_Click(object sender, EventArgs e)
+        {
+            pages.SelectedTab = autorzy_page;
+            autorzy_button.Focus();
         }
     }
 }
