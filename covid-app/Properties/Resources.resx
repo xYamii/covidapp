@@ -118,67 +118,94 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="zgony-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zgony-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="testy_white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\testy_white2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tworca_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tworca_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zakazenia_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zakazenia_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="szczepienia-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\szczepienia-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pomorskie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pomorskie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="testy_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\testy_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="testy_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\testy_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="szczepienia-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\szczepienia-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zgony-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zgony-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngegg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngegg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warminsko-mazurskie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warminsko-mazurskie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zachodniopomorskie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zachodniopomorskie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="szczepienia-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\szczepienia-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1099px-POL_location_map.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1099px-POL_location_map.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dashboard-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="testy_white3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\testy_white3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="dashboard_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tworca_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tworca_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="szczepienia-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\szczepienia-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="map-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\map-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="testy_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\testy_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zakazenia_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zakazenia_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="podlaskie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\podlaskie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zakazenia_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zakazenia_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="zgony-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zgony-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="testy_black1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\testy_black1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="testy_white3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\testy_white3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="map-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zakazenia_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zakazenia_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tworca_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tworca_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="zakazenia_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zakazenia_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="map-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tworca_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tworca_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="test-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\test-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1099px-POL_location_map.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1099px-POL_location_map.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="testy_black1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\testy_black1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="testy_white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\testy_white2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="github1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\github1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="testy_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\testy_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warminsko-mazurskie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warminsko-mazurskie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PngItem_1280311" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PngItem_1280311.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

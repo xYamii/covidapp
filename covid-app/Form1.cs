@@ -195,5 +195,10 @@ namespace covid_app
             pages.SelectedTab = autorzy_page;
             autorzy_button.Focus();
         }
+
+        private void github_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/xYamii/covidapp");
+        }
     }
 }

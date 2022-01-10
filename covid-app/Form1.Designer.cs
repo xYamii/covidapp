@@ -30,7 +30,6 @@ namespace covid_app
         {
             this.components = new System.ComponentModel.Container();
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(S));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -43,6 +42,7 @@ namespace covid_app
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(S));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -50,6 +50,7 @@ namespace covid_app
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -78,35 +79,24 @@ namespace covid_app
             this.label_dashboard_data = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.testy_page = new System.Windows.Forms.TabPage();
-            this.zakazenia_page = new System.Windows.Forms.TabPage();
-            this.szczepienia_page = new System.Windows.Forms.TabPage();
-            this.zgony_page = new System.Windows.Forms.TabPage();
-            this.mapa_page = new System.Windows.Forms.TabPage();
-            this.autorzy_page = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.elipse_panel_zakazenia = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipse_panel_zgony = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipse_panel_testy = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipse_panel_szczepienia = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipse_panel_dane_z_dnia = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuShadowPanel9 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.info_spadek_wzrost_testy = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel8 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.testy_tydzien_temu = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel7 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.testy_wczoraj = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.testy_dzis = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel5 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.wykres_testy = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuShadowPanel5 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.wykres_testy = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bunifuShadowPanel7 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bunifuShadowPanel8 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.testy_dzis = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.testy_wczoraj = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.testy_tydzien_temu = new System.Windows.Forms.Label();
-            this.bunifuShadowPanel9 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.info_spadek_wzrost_testy = new System.Windows.Forms.Label();
+            this.zakazenia_page = new System.Windows.Forms.TabPage();
             this.bunifuShadowPanel10 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.info_spadek_wzrost_zakazenia = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -124,6 +114,7 @@ namespace covid_app
             this.panel3 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.szczepienia_page = new System.Windows.Forms.TabPage();
             this.bunifuShadowPanel15 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.info_spadek_wzrost_szczepienia = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -141,6 +132,7 @@ namespace covid_app
             this.panel4 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.zgony_page = new System.Windows.Forms.TabPage();
             this.bunifuShadowPanel20 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.info_spadek_wzrost_zgony = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -158,7 +150,80 @@ namespace covid_app
             this.panel5 = new System.Windows.Forms.Panel();
             this.dane_z_dnia_zgony = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mapa_page = new System.Windows.Forms.TabPage();
+            this.bunifuShadowPanel26 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel25 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.zgony_podkarpackie = new System.Windows.Forms.Label();
+            this.zgony_malopolskie = new System.Windows.Forms.Label();
+            this.zgony_slaskie = new System.Windows.Forms.Label();
+            this.zgony_opolskie = new System.Windows.Forms.Label();
+            this.zgony_swietokrzyskie = new System.Windows.Forms.Label();
+            this.zgony_lodzkie = new System.Windows.Forms.Label();
+            this.zgony_dolnoslaskie = new System.Windows.Forms.Label();
+            this.zgony_lubelskie = new System.Windows.Forms.Label();
+            this.zgony_mazowieckie = new System.Windows.Forms.Label();
+            this.zgony_kujpom = new System.Windows.Forms.Label();
+            this.zgony_wielkopolskie = new System.Windows.Forms.Label();
+            this.zgony_lubuskie = new System.Windows.Forms.Label();
+            this.zgony_podlaskie = new System.Windows.Forms.Label();
+            this.zgony_warmaz = new System.Windows.Forms.Label();
+            this.zgony_pomorskie = new System.Windows.Forms.Label();
+            this.zgony_zachpom = new System.Windows.Forms.Label();
+            this.zakazenia_podkarpackie = new System.Windows.Forms.Label();
+            this.zakazenia_malopolskie = new System.Windows.Forms.Label();
+            this.zakazenia_slaskie = new System.Windows.Forms.Label();
+            this.zakazenia_opolskie = new System.Windows.Forms.Label();
+            this.zakazenia_swietokrzyskie = new System.Windows.Forms.Label();
+            this.zakazenia_lodzkie = new System.Windows.Forms.Label();
+            this.zakazenia_dolnoslaskie = new System.Windows.Forms.Label();
+            this.zakazenia_lubelskie = new System.Windows.Forms.Label();
+            this.zakazenia_mazowieckie = new System.Windows.Forms.Label();
+            this.zakazenia_kujpom = new System.Windows.Forms.Label();
+            this.zakazenia_wielkopolskie = new System.Windows.Forms.Label();
+            this.zakazenia_lubuskie = new System.Windows.Forms.Label();
+            this.zakazenia_podlaskie = new System.Windows.Forms.Label();
+            this.zakazenia_warmaz = new System.Windows.Forms.Label();
+            this.zakazenia_pomorskie = new System.Windows.Forms.Label();
+            this.zakazenia_zachpom = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dane_z_dnia_mapa = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.autorzy_page = new System.Windows.Forms.TabPage();
+            this.bunifuShadowPanel29 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label52 = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel28 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label50 = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel27 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label51 = new System.Windows.Forms.Label();
+            this.elipse_panel_zakazenia = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipse_panel_zgony = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipse_panel_testy = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipse_panel_szczepienia = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipse_panel_dane_z_dnia = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.github = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.autorzy_button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.zakazenia_button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -170,9 +235,6 @@ namespace covid_app
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.minimize_button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.exit_button = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.dane_z_dnia_mapa = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pages.SuspendLayout();
             this.panel_page.SuspendLayout();
@@ -182,18 +244,14 @@ namespace covid_app
             this.bunifuShadowPanel1.SuspendLayout();
             this.panel_dane_z_dnia.SuspendLayout();
             this.testy_page.SuspendLayout();
-            this.zakazenia_page.SuspendLayout();
-            this.szczepienia_page.SuspendLayout();
-            this.zgony_page.SuspendLayout();
-            this.mapa_page.SuspendLayout();
-            this.autorzy_page.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.bunifuShadowPanel9.SuspendLayout();
+            this.bunifuShadowPanel8.SuspendLayout();
+            this.bunifuShadowPanel7.SuspendLayout();
+            this.bunifuShadowPanel6.SuspendLayout();
             this.bunifuShadowPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wykres_testy)).BeginInit();
-            this.bunifuShadowPanel6.SuspendLayout();
-            this.bunifuShadowPanel7.SuspendLayout();
-            this.bunifuShadowPanel8.SuspendLayout();
-            this.bunifuShadowPanel9.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.zakazenia_page.SuspendLayout();
             this.bunifuShadowPanel10.SuspendLayout();
             this.bunifuShadowPanel11.SuspendLayout();
             this.bunifuShadowPanel12.SuspendLayout();
@@ -201,6 +259,7 @@ namespace covid_app
             this.bunifuShadowPanel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wykres_zakazenia)).BeginInit();
             this.panel3.SuspendLayout();
+            this.szczepienia_page.SuspendLayout();
             this.bunifuShadowPanel15.SuspendLayout();
             this.bunifuShadowPanel16.SuspendLayout();
             this.bunifuShadowPanel17.SuspendLayout();
@@ -208,6 +267,7 @@ namespace covid_app
             this.bunifuShadowPanel19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wykres_szczepienia)).BeginInit();
             this.panel4.SuspendLayout();
+            this.zgony_page.SuspendLayout();
             this.bunifuShadowPanel20.SuspendLayout();
             this.bunifuShadowPanel21.SuspendLayout();
             this.bunifuShadowPanel22.SuspendLayout();
@@ -215,10 +275,17 @@ namespace covid_app
             this.bunifuShadowPanel24.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wykres_zgony)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.mapa_page.SuspendLayout();
+            this.bunifuShadowPanel26.SuspendLayout();
+            this.bunifuShadowPanel25.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.autorzy_page.SuspendLayout();
+            this.bunifuShadowPanel29.SuspendLayout();
+            this.bunifuShadowPanel28.SuspendLayout();
+            this.bunifuShadowPanel27.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -292,12 +359,12 @@ namespace covid_app
             this.pages.Location = new System.Drawing.Point(215, 54);
             this.pages.Multiline = true;
             this.pages.Name = "pages";
-            this.pages.Page = this.mapa_page;
-            this.pages.PageIndex = 5;
-            this.pages.PageName = "mapa_page";
-            this.pages.PageTitle = "mapa_page";
+            this.pages.Page = this.autorzy_page;
+            this.pages.PageIndex = 6;
+            this.pages.PageName = "autorzy_page";
+            this.pages.PageTitle = "autorzy_page";
             this.pages.SelectedIndex = 0;
-            this.pages.Size = new System.Drawing.Size(696, 472);
+            this.pages.Size = new System.Drawing.Size(696, 484);
             this.pages.TabIndex = 5;
             animation1.AnimateOnlyDifferences = false;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
@@ -328,7 +395,7 @@ namespace covid_app
             this.panel_page.Location = new System.Drawing.Point(4, 4);
             this.panel_page.Name = "panel_page";
             this.panel_page.Padding = new System.Windows.Forms.Padding(3);
-            this.panel_page.Size = new System.Drawing.Size(688, 443);
+            this.panel_page.Size = new System.Drawing.Size(688, 455);
             this.panel_page.TabIndex = 0;
             this.panel_page.Text = "panel_page";
             // 
@@ -559,146 +626,182 @@ namespace covid_app
             this.testy_page.Location = new System.Drawing.Point(4, 4);
             this.testy_page.Name = "testy_page";
             this.testy_page.Padding = new System.Windows.Forms.Padding(3);
-            this.testy_page.Size = new System.Drawing.Size(688, 443);
+            this.testy_page.Size = new System.Drawing.Size(688, 455);
             this.testy_page.TabIndex = 1;
             this.testy_page.Text = "testy_page";
             // 
-            // zakazenia_page
+            // bunifuShadowPanel9
             // 
-            this.zakazenia_page.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.zakazenia_page.Controls.Add(this.bunifuShadowPanel10);
-            this.zakazenia_page.Controls.Add(this.bunifuShadowPanel11);
-            this.zakazenia_page.Controls.Add(this.bunifuShadowPanel12);
-            this.zakazenia_page.Controls.Add(this.bunifuShadowPanel13);
-            this.zakazenia_page.Controls.Add(this.bunifuShadowPanel14);
-            this.zakazenia_page.Controls.Add(this.panel3);
-            this.zakazenia_page.Location = new System.Drawing.Point(4, 4);
-            this.zakazenia_page.Name = "zakazenia_page";
-            this.zakazenia_page.Size = new System.Drawing.Size(688, 443);
-            this.zakazenia_page.TabIndex = 2;
-            this.zakazenia_page.Text = "zakazenia_page";
+            this.bunifuShadowPanel9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel9.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel9.BorderRadius = 15;
+            this.bunifuShadowPanel9.BorderThickness = 1;
+            this.bunifuShadowPanel9.Controls.Add(this.info_spadek_wzrost_testy);
+            this.bunifuShadowPanel9.Controls.Add(this.label11);
+            this.bunifuShadowPanel9.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel9.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel9.Location = new System.Drawing.Point(36, 410);
+            this.bunifuShadowPanel9.Name = "bunifuShadowPanel9";
+            this.bunifuShadowPanel9.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel9.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel9.ShadowColor = System.Drawing.Color.Black;
+            this.bunifuShadowPanel9.ShadowDept = 2;
+            this.bunifuShadowPanel9.ShadowDepth = 2;
+            this.bunifuShadowPanel9.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
+            this.bunifuShadowPanel9.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel9.Size = new System.Drawing.Size(610, 33);
+            this.bunifuShadowPanel9.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel9.TabIndex = 2;
             // 
-            // szczepienia_page
+            // info_spadek_wzrost_testy
             // 
-            this.szczepienia_page.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.szczepienia_page.Controls.Add(this.bunifuShadowPanel15);
-            this.szczepienia_page.Controls.Add(this.bunifuShadowPanel16);
-            this.szczepienia_page.Controls.Add(this.bunifuShadowPanel17);
-            this.szczepienia_page.Controls.Add(this.bunifuShadowPanel18);
-            this.szczepienia_page.Controls.Add(this.bunifuShadowPanel19);
-            this.szczepienia_page.Controls.Add(this.panel4);
-            this.szczepienia_page.Location = new System.Drawing.Point(4, 4);
-            this.szczepienia_page.Name = "szczepienia_page";
-            this.szczepienia_page.Size = new System.Drawing.Size(688, 443);
-            this.szczepienia_page.TabIndex = 3;
-            this.szczepienia_page.Text = "szczepienia_page";
+            this.info_spadek_wzrost_testy.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.info_spadek_wzrost_testy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
+            this.info_spadek_wzrost_testy.Location = new System.Drawing.Point(340, 8);
+            this.info_spadek_wzrost_testy.Name = "info_spadek_wzrost_testy";
+            this.info_spadek_wzrost_testy.Size = new System.Drawing.Size(160, 16);
+            this.info_spadek_wzrost_testy.TabIndex = 1;
+            this.info_spadek_wzrost_testy.Text = "spadek o 23%";
+            this.info_spadek_wzrost_testy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // zgony_page
+            // label11
             // 
-            this.zgony_page.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.zgony_page.Controls.Add(this.bunifuShadowPanel20);
-            this.zgony_page.Controls.Add(this.bunifuShadowPanel21);
-            this.zgony_page.Controls.Add(this.bunifuShadowPanel22);
-            this.zgony_page.Controls.Add(this.bunifuShadowPanel23);
-            this.zgony_page.Controls.Add(this.bunifuShadowPanel24);
-            this.zgony_page.Controls.Add(this.panel5);
-            this.zgony_page.Location = new System.Drawing.Point(4, 4);
-            this.zgony_page.Name = "zgony_page";
-            this.zgony_page.Size = new System.Drawing.Size(688, 443);
-            this.zgony_page.TabIndex = 4;
-            this.zgony_page.Text = "zgony_page";
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label11.Location = new System.Drawing.Point(0, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(477, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "W stosunku do zeszłego tygodnia: ";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // mapa_page
+            // bunifuShadowPanel8
             // 
-            this.mapa_page.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.mapa_page.Controls.Add(this.panel6);
-            this.mapa_page.Controls.Add(this.pictureBox1);
-            this.mapa_page.Location = new System.Drawing.Point(4, 4);
-            this.mapa_page.Name = "mapa_page";
-            this.mapa_page.Size = new System.Drawing.Size(688, 443);
-            this.mapa_page.TabIndex = 5;
-            this.mapa_page.Text = "mapa_page";
+            this.bunifuShadowPanel8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel8.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel8.BorderRadius = 15;
+            this.bunifuShadowPanel8.BorderThickness = 1;
+            this.bunifuShadowPanel8.Controls.Add(this.label12);
+            this.bunifuShadowPanel8.Controls.Add(this.testy_tydzien_temu);
+            this.bunifuShadowPanel8.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel8.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel8.Location = new System.Drawing.Point(461, 59);
+            this.bunifuShadowPanel8.Name = "bunifuShadowPanel8";
+            this.bunifuShadowPanel8.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel8.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel8.ShadowColor = System.Drawing.Color.Black;
+            this.bunifuShadowPanel8.ShadowDept = 2;
+            this.bunifuShadowPanel8.ShadowDepth = 2;
+            this.bunifuShadowPanel8.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
+            this.bunifuShadowPanel8.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel8.Size = new System.Drawing.Size(185, 55);
+            this.bunifuShadowPanel8.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel8.TabIndex = 3;
             // 
-            // autorzy_page
+            // label12
             // 
-            this.autorzy_page.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.autorzy_page.Controls.Add(this.label1);
-            this.autorzy_page.Location = new System.Drawing.Point(4, 4);
-            this.autorzy_page.Name = "autorzy_page";
-            this.autorzy_page.Size = new System.Drawing.Size(688, 443);
-            this.autorzy_page.TabIndex = 6;
-            this.autorzy_page.Text = "autorzy_page";
+            this.label12.Location = new System.Drawing.Point(3, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(182, 16);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Wykonane testy tydzień temu";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // testy_tydzien_temu
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(320, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Panel";
+            this.testy_tydzien_temu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.testy_tydzien_temu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
+            this.testy_tydzien_temu.Location = new System.Drawing.Point(3, 24);
+            this.testy_tydzien_temu.Name = "testy_tydzien_temu";
+            this.testy_tydzien_temu.Size = new System.Drawing.Size(185, 27);
+            this.testy_tydzien_temu.TabIndex = 5;
+            this.testy_tydzien_temu.Text = "123456";
+            this.testy_tydzien_temu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // elipse_panel_zakazenia
+            // bunifuShadowPanel7
             // 
-            this.elipse_panel_zakazenia.ElipseRadius = 25;
-            this.elipse_panel_zakazenia.TargetControl = this;
+            this.bunifuShadowPanel7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel7.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel7.BorderRadius = 15;
+            this.bunifuShadowPanel7.BorderThickness = 1;
+            this.bunifuShadowPanel7.Controls.Add(this.label10);
+            this.bunifuShadowPanel7.Controls.Add(this.testy_wczoraj);
+            this.bunifuShadowPanel7.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel7.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel7.Location = new System.Drawing.Point(249, 59);
+            this.bunifuShadowPanel7.Name = "bunifuShadowPanel7";
+            this.bunifuShadowPanel7.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel7.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel7.ShadowColor = System.Drawing.Color.Black;
+            this.bunifuShadowPanel7.ShadowDept = 2;
+            this.bunifuShadowPanel7.ShadowDepth = 2;
+            this.bunifuShadowPanel7.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
+            this.bunifuShadowPanel7.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel7.Size = new System.Drawing.Size(185, 55);
+            this.bunifuShadowPanel7.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel7.TabIndex = 2;
             // 
-            // elipse_panel_zgony
+            // label10
             // 
-            this.elipse_panel_zgony.ElipseRadius = 25;
-            this.elipse_panel_zgony.TargetControl = this;
+            this.label10.Location = new System.Drawing.Point(3, 8);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(182, 16);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Wykonane testy wczoraj";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // elipse_panel_testy
+            // testy_wczoraj
             // 
-            this.elipse_panel_testy.ElipseRadius = 15;
-            this.elipse_panel_testy.TargetControl = this;
+            this.testy_wczoraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.testy_wczoraj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
+            this.testy_wczoraj.Location = new System.Drawing.Point(3, 24);
+            this.testy_wczoraj.Name = "testy_wczoraj";
+            this.testy_wczoraj.Size = new System.Drawing.Size(185, 27);
+            this.testy_wczoraj.TabIndex = 3;
+            this.testy_wczoraj.Text = "123456";
+            this.testy_wczoraj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // elipse_panel_szczepienia
+            // bunifuShadowPanel6
             // 
-            this.elipse_panel_szczepienia.ElipseRadius = 25;
-            this.elipse_panel_szczepienia.TargetControl = this;
+            this.bunifuShadowPanel6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel6.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel6.BorderRadius = 15;
+            this.bunifuShadowPanel6.BorderThickness = 1;
+            this.bunifuShadowPanel6.Controls.Add(this.label9);
+            this.bunifuShadowPanel6.Controls.Add(this.testy_dzis);
+            this.bunifuShadowPanel6.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel6.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel6.Location = new System.Drawing.Point(39, 59);
+            this.bunifuShadowPanel6.Name = "bunifuShadowPanel6";
+            this.bunifuShadowPanel6.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel6.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel6.ShadowColor = System.Drawing.Color.Black;
+            this.bunifuShadowPanel6.ShadowDept = 2;
+            this.bunifuShadowPanel6.ShadowDepth = 2;
+            this.bunifuShadowPanel6.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
+            this.bunifuShadowPanel6.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel6.Size = new System.Drawing.Size(185, 55);
+            this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel6.TabIndex = 1;
             // 
-            // elipse_panel_dane_z_dnia
+            // label9
             // 
-            this.elipse_panel_dane_z_dnia.ElipseRadius = 50;
-            this.elipse_panel_dane_z_dnia.TargetControl = this.panel_dane_z_dnia;
+            this.label9.Location = new System.Drawing.Point(0, 8);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(182, 16);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Wykonane testy dziś";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // testy_dzis
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(39, 23);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(607, 30);
-            this.panel2.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
-            this.label7.Location = new System.Drawing.Point(326, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 16);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "label4";
-            // 
-            // label8
-            // 
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(562, 30);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Testy z dnia";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuElipse3
-            // 
-            this.bunifuElipse3.ElipseRadius = 25;
-            this.bunifuElipse3.TargetControl = this.panel2;
+            this.testy_dzis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.testy_dzis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
+            this.testy_dzis.Location = new System.Drawing.Point(0, 24);
+            this.testy_dzis.Name = "testy_dzis";
+            this.testy_dzis.Size = new System.Drawing.Size(185, 27);
+            this.testy_dzis.TabIndex = 1;
+            this.testy_dzis.Text = "123456";
+            this.testy_dzis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuShadowPanel5
             // 
@@ -739,178 +842,51 @@ namespace covid_app
             this.wykres_testy.TabIndex = 0;
             this.wykres_testy.Text = "chart1";
             // 
-            // bunifuShadowPanel6
+            // panel2
             // 
-            this.bunifuShadowPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel6.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel6.BorderRadius = 15;
-            this.bunifuShadowPanel6.BorderThickness = 1;
-            this.bunifuShadowPanel6.Controls.Add(this.label9);
-            this.bunifuShadowPanel6.Controls.Add(this.testy_dzis);
-            this.bunifuShadowPanel6.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel6.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel6.Location = new System.Drawing.Point(39, 59);
-            this.bunifuShadowPanel6.Name = "bunifuShadowPanel6";
-            this.bunifuShadowPanel6.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel6.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel6.ShadowColor = System.Drawing.Color.Black;
-            this.bunifuShadowPanel6.ShadowDept = 2;
-            this.bunifuShadowPanel6.ShadowDepth = 2;
-            this.bunifuShadowPanel6.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
-            this.bunifuShadowPanel6.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel6.Size = new System.Drawing.Size(185, 55);
-            this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel6.TabIndex = 1;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Location = new System.Drawing.Point(39, 23);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(607, 30);
+            this.panel2.TabIndex = 4;
             // 
-            // bunifuShadowPanel7
+            // label7
             // 
-            this.bunifuShadowPanel7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel7.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel7.BorderRadius = 15;
-            this.bunifuShadowPanel7.BorderThickness = 1;
-            this.bunifuShadowPanel7.Controls.Add(this.label10);
-            this.bunifuShadowPanel7.Controls.Add(this.testy_wczoraj);
-            this.bunifuShadowPanel7.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel7.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel7.Location = new System.Drawing.Point(249, 59);
-            this.bunifuShadowPanel7.Name = "bunifuShadowPanel7";
-            this.bunifuShadowPanel7.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel7.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel7.ShadowColor = System.Drawing.Color.Black;
-            this.bunifuShadowPanel7.ShadowDept = 2;
-            this.bunifuShadowPanel7.ShadowDepth = 2;
-            this.bunifuShadowPanel7.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
-            this.bunifuShadowPanel7.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel7.Size = new System.Drawing.Size(185, 55);
-            this.bunifuShadowPanel7.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel7.TabIndex = 2;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
+            this.label7.Location = new System.Drawing.Point(326, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 16);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "label4";
             // 
-            // bunifuShadowPanel8
+            // label8
             // 
-            this.bunifuShadowPanel8.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel8.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel8.BorderRadius = 15;
-            this.bunifuShadowPanel8.BorderThickness = 1;
-            this.bunifuShadowPanel8.Controls.Add(this.label12);
-            this.bunifuShadowPanel8.Controls.Add(this.testy_tydzien_temu);
-            this.bunifuShadowPanel8.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel8.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel8.Location = new System.Drawing.Point(461, 59);
-            this.bunifuShadowPanel8.Name = "bunifuShadowPanel8";
-            this.bunifuShadowPanel8.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel8.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel8.ShadowColor = System.Drawing.Color.Black;
-            this.bunifuShadowPanel8.ShadowDept = 2;
-            this.bunifuShadowPanel8.ShadowDepth = 2;
-            this.bunifuShadowPanel8.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
-            this.bunifuShadowPanel8.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel8.Size = new System.Drawing.Size(185, 55);
-            this.bunifuShadowPanel8.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel8.TabIndex = 3;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(562, 30);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Testy z dnia";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label9
+            // zakazenia_page
             // 
-            this.label9.Location = new System.Drawing.Point(0, 8);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(182, 16);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Wykonane testy dziś";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // testy_dzis
-            // 
-            this.testy_dzis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.testy_dzis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
-            this.testy_dzis.Location = new System.Drawing.Point(0, 24);
-            this.testy_dzis.Name = "testy_dzis";
-            this.testy_dzis.Size = new System.Drawing.Size(185, 27);
-            this.testy_dzis.TabIndex = 1;
-            this.testy_dzis.Text = "123456";
-            this.testy_dzis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(3, 8);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(182, 16);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Wykonane testy wczoraj";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // testy_wczoraj
-            // 
-            this.testy_wczoraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.testy_wczoraj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
-            this.testy_wczoraj.Location = new System.Drawing.Point(3, 24);
-            this.testy_wczoraj.Name = "testy_wczoraj";
-            this.testy_wczoraj.Size = new System.Drawing.Size(185, 27);
-            this.testy_wczoraj.TabIndex = 3;
-            this.testy_wczoraj.Text = "123456";
-            this.testy_wczoraj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.Location = new System.Drawing.Point(3, 8);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(182, 16);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Wykonane testy tydzień temu";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // testy_tydzien_temu
-            // 
-            this.testy_tydzien_temu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.testy_tydzien_temu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
-            this.testy_tydzien_temu.Location = new System.Drawing.Point(3, 24);
-            this.testy_tydzien_temu.Name = "testy_tydzien_temu";
-            this.testy_tydzien_temu.Size = new System.Drawing.Size(185, 27);
-            this.testy_tydzien_temu.TabIndex = 5;
-            this.testy_tydzien_temu.Text = "123456";
-            this.testy_tydzien_temu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuShadowPanel9
-            // 
-            this.bunifuShadowPanel9.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel9.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.bunifuShadowPanel9.BorderRadius = 15;
-            this.bunifuShadowPanel9.BorderThickness = 1;
-            this.bunifuShadowPanel9.Controls.Add(this.info_spadek_wzrost_testy);
-            this.bunifuShadowPanel9.Controls.Add(this.label11);
-            this.bunifuShadowPanel9.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel9.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel9.Location = new System.Drawing.Point(36, 410);
-            this.bunifuShadowPanel9.Name = "bunifuShadowPanel9";
-            this.bunifuShadowPanel9.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel9.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel9.ShadowColor = System.Drawing.Color.Black;
-            this.bunifuShadowPanel9.ShadowDept = 2;
-            this.bunifuShadowPanel9.ShadowDepth = 2;
-            this.bunifuShadowPanel9.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
-            this.bunifuShadowPanel9.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel9.Size = new System.Drawing.Size(610, 33);
-            this.bunifuShadowPanel9.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel9.TabIndex = 2;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label11.Location = new System.Drawing.Point(0, 8);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(477, 16);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "W stosunku do zeszłego tygodnia: ";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // info_spadek_wzrost_testy
-            // 
-            this.info_spadek_wzrost_testy.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.info_spadek_wzrost_testy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
-            this.info_spadek_wzrost_testy.Location = new System.Drawing.Point(340, 8);
-            this.info_spadek_wzrost_testy.Name = "info_spadek_wzrost_testy";
-            this.info_spadek_wzrost_testy.Size = new System.Drawing.Size(160, 16);
-            this.info_spadek_wzrost_testy.TabIndex = 1;
-            this.info_spadek_wzrost_testy.Text = "spadek o 23%";
-            this.info_spadek_wzrost_testy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.zakazenia_page.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.zakazenia_page.Controls.Add(this.bunifuShadowPanel10);
+            this.zakazenia_page.Controls.Add(this.bunifuShadowPanel11);
+            this.zakazenia_page.Controls.Add(this.bunifuShadowPanel12);
+            this.zakazenia_page.Controls.Add(this.bunifuShadowPanel13);
+            this.zakazenia_page.Controls.Add(this.bunifuShadowPanel14);
+            this.zakazenia_page.Controls.Add(this.panel3);
+            this.zakazenia_page.Location = new System.Drawing.Point(4, 4);
+            this.zakazenia_page.Name = "zakazenia_page";
+            this.zakazenia_page.Size = new System.Drawing.Size(688, 455);
+            this.zakazenia_page.TabIndex = 2;
+            this.zakazenia_page.Text = "zakazenia_page";
             // 
             // bunifuShadowPanel10
             // 
@@ -1155,6 +1131,21 @@ namespace covid_app
             this.label23.Text = "Zakażenia z dnia";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // szczepienia_page
+            // 
+            this.szczepienia_page.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.szczepienia_page.Controls.Add(this.bunifuShadowPanel15);
+            this.szczepienia_page.Controls.Add(this.bunifuShadowPanel16);
+            this.szczepienia_page.Controls.Add(this.bunifuShadowPanel17);
+            this.szczepienia_page.Controls.Add(this.bunifuShadowPanel18);
+            this.szczepienia_page.Controls.Add(this.bunifuShadowPanel19);
+            this.szczepienia_page.Controls.Add(this.panel4);
+            this.szczepienia_page.Location = new System.Drawing.Point(4, 4);
+            this.szczepienia_page.Name = "szczepienia_page";
+            this.szczepienia_page.Size = new System.Drawing.Size(688, 455);
+            this.szczepienia_page.TabIndex = 3;
+            this.szczepienia_page.Text = "szczepienia_page";
+            // 
             // bunifuShadowPanel15
             // 
             this.bunifuShadowPanel15.BackColor = System.Drawing.Color.Transparent;
@@ -1397,6 +1388,21 @@ namespace covid_app
             this.label28.TabIndex = 0;
             this.label28.Text = "Szczepienia z dnia:";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_page
+            // 
+            this.zgony_page.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.zgony_page.Controls.Add(this.bunifuShadowPanel20);
+            this.zgony_page.Controls.Add(this.bunifuShadowPanel21);
+            this.zgony_page.Controls.Add(this.bunifuShadowPanel22);
+            this.zgony_page.Controls.Add(this.bunifuShadowPanel23);
+            this.zgony_page.Controls.Add(this.bunifuShadowPanel24);
+            this.zgony_page.Controls.Add(this.panel5);
+            this.zgony_page.Location = new System.Drawing.Point(4, 4);
+            this.zgony_page.Name = "zgony_page";
+            this.zgony_page.Size = new System.Drawing.Size(688, 455);
+            this.zgony_page.TabIndex = 4;
+            this.zgony_page.Text = "zgony_page";
             // 
             // bunifuShadowPanel20
             // 
@@ -1641,15 +1647,908 @@ namespace covid_app
             this.label34.Text = "Zgony z dnia:";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // mapa_page
             // 
-            this.pictureBox1.Image = global::covid_app.Properties.Resources._1099px_POL_location_map_svg;
-            this.pictureBox1.Location = new System.Drawing.Point(120, 72);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(405, 368);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.mapa_page.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.mapa_page.Controls.Add(this.bunifuShadowPanel26);
+            this.mapa_page.Controls.Add(this.bunifuShadowPanel25);
+            this.mapa_page.Controls.Add(this.panel6);
+            this.mapa_page.Location = new System.Drawing.Point(4, 4);
+            this.mapa_page.Name = "mapa_page";
+            this.mapa_page.Size = new System.Drawing.Size(688, 455);
+            this.mapa_page.TabIndex = 5;
+            this.mapa_page.Text = "S";
+            // 
+            // bunifuShadowPanel26
+            // 
+            this.bunifuShadowPanel26.BackColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel26.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel26.BorderRadius = 15;
+            this.bunifuShadowPanel26.BorderThickness = 1;
+            this.bunifuShadowPanel26.Controls.Add(this.label49);
+            this.bunifuShadowPanel26.Controls.Add(this.label48);
+            this.bunifuShadowPanel26.Controls.Add(this.label13);
+            this.bunifuShadowPanel26.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel26.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel26.Location = new System.Drawing.Point(39, 48);
+            this.bunifuShadowPanel26.Name = "bunifuShadowPanel26";
+            this.bunifuShadowPanel26.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(35)))), ((int)(((byte)(254)))));
+            this.bunifuShadowPanel26.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(35)))), ((int)(((byte)(254)))));
+            this.bunifuShadowPanel26.ShadowColor = System.Drawing.Color.Black;
+            this.bunifuShadowPanel26.ShadowDept = 2;
+            this.bunifuShadowPanel26.ShadowDepth = 2;
+            this.bunifuShadowPanel26.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
+            this.bunifuShadowPanel26.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel26.Size = new System.Drawing.Size(607, 35);
+            this.bunifuShadowPanel26.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel26.TabIndex = 1;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.Color.Transparent;
+            this.label49.ForeColor = System.Drawing.Color.White;
+            this.label49.Location = new System.Drawing.Point(473, 9);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(45, 16);
+            this.label49.TabIndex = 2;
+            this.label49.Text = "Zgony";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.ForeColor = System.Drawing.Color.White;
+            this.label48.Location = new System.Drawing.Point(284, 9);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(70, 16);
+            this.label48.TabIndex = 1;
+            this.label48.Text = "Zakażenia";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(79, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 16);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Województwo";
+            // 
+            // bunifuShadowPanel25
+            // 
+            this.bunifuShadowPanel25.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel25.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel25.BorderRadius = 15;
+            this.bunifuShadowPanel25.BorderThickness = 1;
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_podkarpackie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_malopolskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_slaskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_opolskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_swietokrzyskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_lodzkie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_dolnoslaskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_lubelskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_mazowieckie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_kujpom);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_wielkopolskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_lubuskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_podlaskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_warmaz);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_pomorskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zgony_zachpom);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_podkarpackie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_malopolskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_slaskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_opolskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_swietokrzyskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_lodzkie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_dolnoslaskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_lubelskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_mazowieckie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_kujpom);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_wielkopolskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_lubuskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_podlaskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_warmaz);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_pomorskie);
+            this.bunifuShadowPanel25.Controls.Add(this.zakazenia_zachpom);
+            this.bunifuShadowPanel25.Controls.Add(this.label47);
+            this.bunifuShadowPanel25.Controls.Add(this.label46);
+            this.bunifuShadowPanel25.Controls.Add(this.label45);
+            this.bunifuShadowPanel25.Controls.Add(this.label44);
+            this.bunifuShadowPanel25.Controls.Add(this.label43);
+            this.bunifuShadowPanel25.Controls.Add(this.label42);
+            this.bunifuShadowPanel25.Controls.Add(this.label41);
+            this.bunifuShadowPanel25.Controls.Add(this.label40);
+            this.bunifuShadowPanel25.Controls.Add(this.label39);
+            this.bunifuShadowPanel25.Controls.Add(this.label38);
+            this.bunifuShadowPanel25.Controls.Add(this.label37);
+            this.bunifuShadowPanel25.Controls.Add(this.label36);
+            this.bunifuShadowPanel25.Controls.Add(this.label35);
+            this.bunifuShadowPanel25.Controls.Add(this.label33);
+            this.bunifuShadowPanel25.Controls.Add(this.label32);
+            this.bunifuShadowPanel25.Controls.Add(this.label30);
+            this.bunifuShadowPanel25.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel25.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel25.Location = new System.Drawing.Point(39, 48);
+            this.bunifuShadowPanel25.Name = "bunifuShadowPanel25";
+            this.bunifuShadowPanel25.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel25.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel25.ShadowColor = System.Drawing.Color.Black;
+            this.bunifuShadowPanel25.ShadowDept = 2;
+            this.bunifuShadowPanel25.ShadowDepth = 5;
+            this.bunifuShadowPanel25.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
+            this.bunifuShadowPanel25.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel25.Size = new System.Drawing.Size(607, 407);
+            this.bunifuShadowPanel25.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Lowered;
+            this.bunifuShadowPanel25.TabIndex = 24;
+            // 
+            // zgony_podkarpackie
+            // 
+            this.zgony_podkarpackie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_podkarpackie.Location = new System.Drawing.Point(406, 373);
+            this.zgony_podkarpackie.Name = "zgony_podkarpackie";
+            this.zgony_podkarpackie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_podkarpackie.TabIndex = 47;
+            this.zgony_podkarpackie.Text = "podkarpackie";
+            this.zgony_podkarpackie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_malopolskie
+            // 
+            this.zgony_malopolskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_malopolskie.Location = new System.Drawing.Point(406, 353);
+            this.zgony_malopolskie.Name = "zgony_malopolskie";
+            this.zgony_malopolskie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_malopolskie.TabIndex = 46;
+            this.zgony_malopolskie.Text = "małopolskie";
+            this.zgony_malopolskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_slaskie
+            // 
+            this.zgony_slaskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_slaskie.Location = new System.Drawing.Point(406, 333);
+            this.zgony_slaskie.Name = "zgony_slaskie";
+            this.zgony_slaskie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_slaskie.TabIndex = 45;
+            this.zgony_slaskie.Text = "śląskie";
+            this.zgony_slaskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_opolskie
+            // 
+            this.zgony_opolskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_opolskie.Location = new System.Drawing.Point(406, 310);
+            this.zgony_opolskie.Name = "zgony_opolskie";
+            this.zgony_opolskie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_opolskie.TabIndex = 44;
+            this.zgony_opolskie.Text = "opolskie";
+            this.zgony_opolskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_swietokrzyskie
+            // 
+            this.zgony_swietokrzyskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_swietokrzyskie.Location = new System.Drawing.Point(406, 287);
+            this.zgony_swietokrzyskie.Name = "zgony_swietokrzyskie";
+            this.zgony_swietokrzyskie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_swietokrzyskie.TabIndex = 43;
+            this.zgony_swietokrzyskie.Text = "świętokrzyskie";
+            this.zgony_swietokrzyskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_lodzkie
+            // 
+            this.zgony_lodzkie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_lodzkie.Location = new System.Drawing.Point(406, 264);
+            this.zgony_lodzkie.Name = "zgony_lodzkie";
+            this.zgony_lodzkie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_lodzkie.TabIndex = 42;
+            this.zgony_lodzkie.Text = "łódzkie";
+            this.zgony_lodzkie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_dolnoslaskie
+            // 
+            this.zgony_dolnoslaskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_dolnoslaskie.Location = new System.Drawing.Point(406, 241);
+            this.zgony_dolnoslaskie.Name = "zgony_dolnoslaskie";
+            this.zgony_dolnoslaskie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_dolnoslaskie.TabIndex = 41;
+            this.zgony_dolnoslaskie.Text = "dolnośląskie";
+            this.zgony_dolnoslaskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_lubelskie
+            // 
+            this.zgony_lubelskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_lubelskie.Location = new System.Drawing.Point(406, 218);
+            this.zgony_lubelskie.Name = "zgony_lubelskie";
+            this.zgony_lubelskie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_lubelskie.TabIndex = 40;
+            this.zgony_lubelskie.Text = "lubelskie";
+            this.zgony_lubelskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_mazowieckie
+            // 
+            this.zgony_mazowieckie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_mazowieckie.Location = new System.Drawing.Point(406, 195);
+            this.zgony_mazowieckie.Name = "zgony_mazowieckie";
+            this.zgony_mazowieckie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_mazowieckie.TabIndex = 39;
+            this.zgony_mazowieckie.Text = "mazowieckie";
+            this.zgony_mazowieckie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_kujpom
+            // 
+            this.zgony_kujpom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_kujpom.Location = new System.Drawing.Point(406, 172);
+            this.zgony_kujpom.Name = "zgony_kujpom";
+            this.zgony_kujpom.Size = new System.Drawing.Size(180, 23);
+            this.zgony_kujpom.TabIndex = 38;
+            this.zgony_kujpom.Text = "kujawsko-pomorskie";
+            this.zgony_kujpom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_wielkopolskie
+            // 
+            this.zgony_wielkopolskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_wielkopolskie.Location = new System.Drawing.Point(406, 149);
+            this.zgony_wielkopolskie.Name = "zgony_wielkopolskie";
+            this.zgony_wielkopolskie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_wielkopolskie.TabIndex = 37;
+            this.zgony_wielkopolskie.Text = "wielkopolskie";
+            this.zgony_wielkopolskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_lubuskie
+            // 
+            this.zgony_lubuskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_lubuskie.Location = new System.Drawing.Point(406, 126);
+            this.zgony_lubuskie.Name = "zgony_lubuskie";
+            this.zgony_lubuskie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_lubuskie.TabIndex = 36;
+            this.zgony_lubuskie.Text = "lubuskie";
+            this.zgony_lubuskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_podlaskie
+            // 
+            this.zgony_podlaskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_podlaskie.Location = new System.Drawing.Point(406, 103);
+            this.zgony_podlaskie.Name = "zgony_podlaskie";
+            this.zgony_podlaskie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_podlaskie.TabIndex = 35;
+            this.zgony_podlaskie.Text = "podlaskie";
+            this.zgony_podlaskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_warmaz
+            // 
+            this.zgony_warmaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_warmaz.Location = new System.Drawing.Point(406, 80);
+            this.zgony_warmaz.Name = "zgony_warmaz";
+            this.zgony_warmaz.Size = new System.Drawing.Size(180, 23);
+            this.zgony_warmaz.TabIndex = 34;
+            this.zgony_warmaz.Text = "warmińsko-mazurskie";
+            this.zgony_warmaz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_pomorskie
+            // 
+            this.zgony_pomorskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_pomorskie.Location = new System.Drawing.Point(406, 57);
+            this.zgony_pomorskie.Name = "zgony_pomorskie";
+            this.zgony_pomorskie.Size = new System.Drawing.Size(180, 23);
+            this.zgony_pomorskie.TabIndex = 33;
+            this.zgony_pomorskie.Text = "pomorskie";
+            this.zgony_pomorskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zgony_zachpom
+            // 
+            this.zgony_zachpom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zgony_zachpom.Location = new System.Drawing.Point(406, 34);
+            this.zgony_zachpom.Name = "zgony_zachpom";
+            this.zgony_zachpom.Size = new System.Drawing.Size(180, 23);
+            this.zgony_zachpom.TabIndex = 32;
+            this.zgony_zachpom.Text = "zachodnio-pomorskie";
+            this.zgony_zachpom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_podkarpackie
+            // 
+            this.zakazenia_podkarpackie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_podkarpackie.Location = new System.Drawing.Point(220, 373);
+            this.zakazenia_podkarpackie.Name = "zakazenia_podkarpackie";
+            this.zakazenia_podkarpackie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_podkarpackie.TabIndex = 31;
+            this.zakazenia_podkarpackie.Text = "podkarpackie";
+            this.zakazenia_podkarpackie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_malopolskie
+            // 
+            this.zakazenia_malopolskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_malopolskie.Location = new System.Drawing.Point(220, 353);
+            this.zakazenia_malopolskie.Name = "zakazenia_malopolskie";
+            this.zakazenia_malopolskie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_malopolskie.TabIndex = 30;
+            this.zakazenia_malopolskie.Text = "małopolskie";
+            this.zakazenia_malopolskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_slaskie
+            // 
+            this.zakazenia_slaskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_slaskie.Location = new System.Drawing.Point(220, 333);
+            this.zakazenia_slaskie.Name = "zakazenia_slaskie";
+            this.zakazenia_slaskie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_slaskie.TabIndex = 29;
+            this.zakazenia_slaskie.Text = "śląskie";
+            this.zakazenia_slaskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_opolskie
+            // 
+            this.zakazenia_opolskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_opolskie.Location = new System.Drawing.Point(220, 310);
+            this.zakazenia_opolskie.Name = "zakazenia_opolskie";
+            this.zakazenia_opolskie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_opolskie.TabIndex = 28;
+            this.zakazenia_opolskie.Text = "opolskie";
+            this.zakazenia_opolskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_swietokrzyskie
+            // 
+            this.zakazenia_swietokrzyskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_swietokrzyskie.Location = new System.Drawing.Point(220, 287);
+            this.zakazenia_swietokrzyskie.Name = "zakazenia_swietokrzyskie";
+            this.zakazenia_swietokrzyskie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_swietokrzyskie.TabIndex = 27;
+            this.zakazenia_swietokrzyskie.Text = "świętokrzyskie";
+            this.zakazenia_swietokrzyskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_lodzkie
+            // 
+            this.zakazenia_lodzkie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_lodzkie.Location = new System.Drawing.Point(220, 264);
+            this.zakazenia_lodzkie.Name = "zakazenia_lodzkie";
+            this.zakazenia_lodzkie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_lodzkie.TabIndex = 26;
+            this.zakazenia_lodzkie.Text = "łódzkie";
+            this.zakazenia_lodzkie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_dolnoslaskie
+            // 
+            this.zakazenia_dolnoslaskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_dolnoslaskie.Location = new System.Drawing.Point(220, 241);
+            this.zakazenia_dolnoslaskie.Name = "zakazenia_dolnoslaskie";
+            this.zakazenia_dolnoslaskie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_dolnoslaskie.TabIndex = 25;
+            this.zakazenia_dolnoslaskie.Text = "dolnośląskie";
+            this.zakazenia_dolnoslaskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_lubelskie
+            // 
+            this.zakazenia_lubelskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_lubelskie.Location = new System.Drawing.Point(220, 218);
+            this.zakazenia_lubelskie.Name = "zakazenia_lubelskie";
+            this.zakazenia_lubelskie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_lubelskie.TabIndex = 24;
+            this.zakazenia_lubelskie.Text = "lubelskie";
+            this.zakazenia_lubelskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_mazowieckie
+            // 
+            this.zakazenia_mazowieckie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_mazowieckie.Location = new System.Drawing.Point(220, 195);
+            this.zakazenia_mazowieckie.Name = "zakazenia_mazowieckie";
+            this.zakazenia_mazowieckie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_mazowieckie.TabIndex = 23;
+            this.zakazenia_mazowieckie.Text = "mazowieckie";
+            this.zakazenia_mazowieckie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_kujpom
+            // 
+            this.zakazenia_kujpom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_kujpom.Location = new System.Drawing.Point(220, 172);
+            this.zakazenia_kujpom.Name = "zakazenia_kujpom";
+            this.zakazenia_kujpom.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_kujpom.TabIndex = 22;
+            this.zakazenia_kujpom.Text = "kujawsko-pomorskie";
+            this.zakazenia_kujpom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_wielkopolskie
+            // 
+            this.zakazenia_wielkopolskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_wielkopolskie.Location = new System.Drawing.Point(220, 149);
+            this.zakazenia_wielkopolskie.Name = "zakazenia_wielkopolskie";
+            this.zakazenia_wielkopolskie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_wielkopolskie.TabIndex = 21;
+            this.zakazenia_wielkopolskie.Text = "wielkopolskie";
+            this.zakazenia_wielkopolskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_lubuskie
+            // 
+            this.zakazenia_lubuskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_lubuskie.Location = new System.Drawing.Point(220, 126);
+            this.zakazenia_lubuskie.Name = "zakazenia_lubuskie";
+            this.zakazenia_lubuskie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_lubuskie.TabIndex = 20;
+            this.zakazenia_lubuskie.Text = "lubuskie";
+            this.zakazenia_lubuskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_podlaskie
+            // 
+            this.zakazenia_podlaskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_podlaskie.Location = new System.Drawing.Point(220, 103);
+            this.zakazenia_podlaskie.Name = "zakazenia_podlaskie";
+            this.zakazenia_podlaskie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_podlaskie.TabIndex = 19;
+            this.zakazenia_podlaskie.Text = "podlaskie";
+            this.zakazenia_podlaskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_warmaz
+            // 
+            this.zakazenia_warmaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_warmaz.Location = new System.Drawing.Point(220, 80);
+            this.zakazenia_warmaz.Name = "zakazenia_warmaz";
+            this.zakazenia_warmaz.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_warmaz.TabIndex = 18;
+            this.zakazenia_warmaz.Text = "warmińsko-mazurskie";
+            this.zakazenia_warmaz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_pomorskie
+            // 
+            this.zakazenia_pomorskie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_pomorskie.Location = new System.Drawing.Point(220, 57);
+            this.zakazenia_pomorskie.Name = "zakazenia_pomorskie";
+            this.zakazenia_pomorskie.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_pomorskie.TabIndex = 17;
+            this.zakazenia_pomorskie.Text = "pomorskie";
+            this.zakazenia_pomorskie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // zakazenia_zachpom
+            // 
+            this.zakazenia_zachpom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.zakazenia_zachpom.Location = new System.Drawing.Point(220, 34);
+            this.zakazenia_zachpom.Name = "zakazenia_zachpom";
+            this.zakazenia_zachpom.Size = new System.Drawing.Size(180, 23);
+            this.zakazenia_zachpom.TabIndex = 16;
+            this.zakazenia_zachpom.Text = "zachodnio-pomorskie";
+            this.zakazenia_zachpom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label47
+            // 
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label47.Location = new System.Drawing.Point(24, 373);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(180, 23);
+            this.label47.TabIndex = 15;
+            this.label47.Text = "podkarpackie";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label46
+            // 
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label46.Location = new System.Drawing.Point(24, 353);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(180, 23);
+            this.label46.TabIndex = 14;
+            this.label46.Text = "małopolskie";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label45
+            // 
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label45.Location = new System.Drawing.Point(24, 333);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(180, 23);
+            this.label45.TabIndex = 13;
+            this.label45.Text = "śląskie";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label44
+            // 
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label44.Location = new System.Drawing.Point(24, 310);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(180, 23);
+            this.label44.TabIndex = 12;
+            this.label44.Text = "opolskie";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label43
+            // 
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label43.Location = new System.Drawing.Point(24, 287);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(180, 23);
+            this.label43.TabIndex = 11;
+            this.label43.Text = "świętokrzyskie";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label42
+            // 
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label42.Location = new System.Drawing.Point(24, 264);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(180, 23);
+            this.label42.TabIndex = 10;
+            this.label42.Text = "łódzkie";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label41
+            // 
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label41.Location = new System.Drawing.Point(24, 241);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(180, 23);
+            this.label41.TabIndex = 9;
+            this.label41.Text = "dolnośląskie";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label40
+            // 
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label40.Location = new System.Drawing.Point(24, 218);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(180, 23);
+            this.label40.TabIndex = 8;
+            this.label40.Text = "lubelskie";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label39
+            // 
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label39.Location = new System.Drawing.Point(24, 195);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(180, 23);
+            this.label39.TabIndex = 7;
+            this.label39.Text = "mazowieckie";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label38
+            // 
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label38.Location = new System.Drawing.Point(24, 172);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(180, 23);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "kujawsko-pomorskie";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label37
+            // 
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label37.Location = new System.Drawing.Point(24, 149);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(180, 23);
+            this.label37.TabIndex = 5;
+            this.label37.Text = "wielkopolskie";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label36
+            // 
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label36.Location = new System.Drawing.Point(24, 126);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(180, 23);
+            this.label36.TabIndex = 4;
+            this.label36.Text = "lubuskie";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label35
+            // 
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label35.Location = new System.Drawing.Point(24, 103);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(180, 23);
+            this.label35.TabIndex = 3;
+            this.label35.Text = "podlaskie";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label33
+            // 
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label33.Location = new System.Drawing.Point(24, 80);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(180, 23);
+            this.label33.TabIndex = 2;
+            this.label33.Text = "warmińsko-mazurskie";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label32
+            // 
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label32.Location = new System.Drawing.Point(24, 57);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(180, 23);
+            this.label32.TabIndex = 1;
+            this.label32.Text = "pomorskie";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label30
+            // 
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label30.Location = new System.Drawing.Point(24, 34);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(180, 23);
+            this.label30.TabIndex = 0;
+            this.label30.Text = "zachodnio-pomorskie";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.dane_z_dnia_mapa);
+            this.panel6.Controls.Add(this.label26);
+            this.panel6.Location = new System.Drawing.Point(39, 12);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(607, 30);
+            this.panel6.TabIndex = 23;
+            // 
+            // dane_z_dnia_mapa
+            // 
+            this.dane_z_dnia_mapa.AutoSize = true;
+            this.dane_z_dnia_mapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dane_z_dnia_mapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
+            this.dane_z_dnia_mapa.Location = new System.Drawing.Point(326, 7);
+            this.dane_z_dnia_mapa.Name = "dane_z_dnia_mapa";
+            this.dane_z_dnia_mapa.Size = new System.Drawing.Size(50, 16);
+            this.dane_z_dnia_mapa.TabIndex = 1;
+            this.dane_z_dnia_mapa.Text = "label4";
+            // 
+            // label26
+            // 
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
+            this.label26.Location = new System.Drawing.Point(3, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(573, 30);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Dane z dnia:";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // autorzy_page
+            // 
+            this.autorzy_page.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.autorzy_page.Controls.Add(this.github);
+            this.autorzy_page.Controls.Add(this.bunifuShadowPanel29);
+            this.autorzy_page.Controls.Add(this.bunifuShadowPanel28);
+            this.autorzy_page.Controls.Add(this.bunifuShadowPanel27);
+            this.autorzy_page.Controls.Add(this.panel7);
+            this.autorzy_page.Location = new System.Drawing.Point(4, 4);
+            this.autorzy_page.Name = "autorzy_page";
+            this.autorzy_page.Size = new System.Drawing.Size(688, 455);
+            this.autorzy_page.TabIndex = 6;
+            this.autorzy_page.Text = "autorzy_page";
+            // 
+            // bunifuShadowPanel29
+            // 
+            this.bunifuShadowPanel29.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel29.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel29.BorderRadius = 15;
+            this.bunifuShadowPanel29.BorderThickness = 1;
+            this.bunifuShadowPanel29.Controls.Add(this.label52);
+            this.bunifuShadowPanel29.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel29.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel29.Location = new System.Drawing.Point(250, 211);
+            this.bunifuShadowPanel29.Name = "bunifuShadowPanel29";
+            this.bunifuShadowPanel29.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel29.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel29.ShadowColor = System.Drawing.Color.Black;
+            this.bunifuShadowPanel29.ShadowDept = 2;
+            this.bunifuShadowPanel29.ShadowDepth = 2;
+            this.bunifuShadowPanel29.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
+            this.bunifuShadowPanel29.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel29.Size = new System.Drawing.Size(185, 55);
+            this.bunifuShadowPanel29.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel29.TabIndex = 27;
+            // 
+            // label52
+            // 
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label52.Location = new System.Drawing.Point(0, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(182, 55);
+            this.label52.TabIndex = 0;
+            this.label52.Text = "Adam Stoiński";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuShadowPanel28
+            // 
+            this.bunifuShadowPanel28.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel28.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel28.BorderRadius = 15;
+            this.bunifuShadowPanel28.BorderThickness = 1;
+            this.bunifuShadowPanel28.Controls.Add(this.label50);
+            this.bunifuShadowPanel28.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel28.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel28.Location = new System.Drawing.Point(250, 150);
+            this.bunifuShadowPanel28.Name = "bunifuShadowPanel28";
+            this.bunifuShadowPanel28.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel28.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel28.ShadowColor = System.Drawing.Color.Black;
+            this.bunifuShadowPanel28.ShadowDept = 2;
+            this.bunifuShadowPanel28.ShadowDepth = 2;
+            this.bunifuShadowPanel28.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
+            this.bunifuShadowPanel28.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel28.Size = new System.Drawing.Size(185, 55);
+            this.bunifuShadowPanel28.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel28.TabIndex = 26;
+            // 
+            // label50
+            // 
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label50.Location = new System.Drawing.Point(0, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(182, 55);
+            this.label50.TabIndex = 0;
+            this.label50.Text = "Kacper Milczyński";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuShadowPanel27
+            // 
+            this.bunifuShadowPanel27.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel27.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuShadowPanel27.BorderRadius = 15;
+            this.bunifuShadowPanel27.BorderThickness = 1;
+            this.bunifuShadowPanel27.Controls.Add(this.label1);
+            this.bunifuShadowPanel27.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel27.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel27.Location = new System.Drawing.Point(246, 89);
+            this.bunifuShadowPanel27.Name = "bunifuShadowPanel27";
+            this.bunifuShadowPanel27.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel27.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel27.ShadowColor = System.Drawing.Color.Black;
+            this.bunifuShadowPanel27.ShadowDept = 2;
+            this.bunifuShadowPanel27.ShadowDepth = 2;
+            this.bunifuShadowPanel27.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Dropped;
+            this.bunifuShadowPanel27.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel27.Size = new System.Drawing.Size(185, 55);
+            this.bunifuShadowPanel27.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel27.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 55);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Grzegorz Czarny";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.label51);
+            this.panel7.Location = new System.Drawing.Point(39, 18);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(607, 30);
+            this.panel7.TabIndex = 24;
+            // 
+            // label51
+            // 
+            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
+            this.label51.Location = new System.Drawing.Point(3, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(604, 30);
+            this.label51.TabIndex = 0;
+            this.label51.Text = "Autorzy";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // elipse_panel_zakazenia
+            // 
+            this.elipse_panel_zakazenia.ElipseRadius = 25;
+            this.elipse_panel_zakazenia.TargetControl = this;
+            // 
+            // elipse_panel_zgony
+            // 
+            this.elipse_panel_zgony.ElipseRadius = 25;
+            this.elipse_panel_zgony.TargetControl = this;
+            // 
+            // elipse_panel_testy
+            // 
+            this.elipse_panel_testy.ElipseRadius = 15;
+            this.elipse_panel_testy.TargetControl = this;
+            // 
+            // elipse_panel_szczepienia
+            // 
+            this.elipse_panel_szczepienia.ElipseRadius = 25;
+            this.elipse_panel_szczepienia.TargetControl = this;
+            // 
+            // elipse_panel_dane_z_dnia
+            // 
+            this.elipse_panel_dane_z_dnia.ElipseRadius = 50;
+            this.elipse_panel_dane_z_dnia.TargetControl = this.panel_dane_z_dnia;
+            // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 25;
+            this.bunifuElipse3.TargetControl = this.panel2;
+            // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 30;
+            this.bunifuElipse4.TargetControl = this.github;
+            // 
+            // github
+            // 
+            this.github.AllowAnimations = true;
+            this.github.AllowMouseEffects = true;
+            this.github.AllowToggling = false;
+            this.github.AnimationSpeed = 200;
+            this.github.AutoGenerateColors = false;
+            this.github.AutoRoundBorders = false;
+            this.github.AutoSizeLeftIcon = true;
+            this.github.AutoSizeRightIcon = true;
+            this.github.BackColor = System.Drawing.Color.Transparent;
+            this.github.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(35)))), ((int)(((byte)(255)))));
+            this.github.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("github.BackgroundImage")));
+            this.github.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.github.ButtonText = "Github";
+            this.github.ButtonTextMarginLeft = 0;
+            this.github.ColorContrastOnClick = 45;
+            this.github.ColorContrastOnHover = 45;
+            this.github.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.github.CustomizableEdges = borderEdges1;
+            this.github.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.github.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.github.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.github.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.github.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.github.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.github.ForeColor = System.Drawing.Color.White;
+            this.github.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.github.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.github.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.github.IconMarginLeft = 11;
+            this.github.IconPadding = 10;
+            this.github.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.github.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.github.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.github.IconSize = 25;
+            this.github.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.github.IdleBorderRadius = 1;
+            this.github.IdleBorderThickness = 1;
+            this.github.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(35)))), ((int)(((byte)(255)))));
+            this.github.IdleIconLeftImage = global::covid_app.Properties.Resources.PngItem_1280311;
+            this.github.IdleIconRightImage = null;
+            this.github.IndicateFocus = false;
+            this.github.Location = new System.Drawing.Point(246, 302);
+            this.github.Name = "github";
+            this.github.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.github.OnDisabledState.BorderRadius = 1;
+            this.github.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.github.OnDisabledState.BorderThickness = 1;
+            this.github.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.github.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.github.OnDisabledState.IconLeftImage = null;
+            this.github.OnDisabledState.IconRightImage = null;
+            this.github.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(35)))), ((int)(((byte)(255)))));
+            this.github.onHoverState.BorderRadius = 1;
+            this.github.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.github.onHoverState.BorderThickness = 1;
+            this.github.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(35)))), ((int)(((byte)(255)))));
+            this.github.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.github.onHoverState.IconLeftImage = global::covid_app.Properties.Resources.PngItem_1280311;
+            this.github.onHoverState.IconRightImage = null;
+            this.github.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.github.OnIdleState.BorderRadius = 1;
+            this.github.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.github.OnIdleState.BorderThickness = 1;
+            this.github.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(35)))), ((int)(((byte)(255)))));
+            this.github.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.github.OnIdleState.IconLeftImage = global::covid_app.Properties.Resources.PngItem_1280311;
+            this.github.OnIdleState.IconRightImage = null;
+            this.github.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(35)))), ((int)(((byte)(255)))));
+            this.github.OnPressedState.BorderRadius = 1;
+            this.github.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.github.OnPressedState.BorderThickness = 1;
+            this.github.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(35)))), ((int)(((byte)(255)))));
+            this.github.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.github.OnPressedState.IconLeftImage = global::covid_app.Properties.Resources.PngItem_1280311;
+            this.github.OnPressedState.IconRightImage = null;
+            this.github.Size = new System.Drawing.Size(193, 39);
+            this.github.TabIndex = 28;
+            this.github.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.github.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.github.TextMarginLeft = 0;
+            this.github.TextPadding = new System.Windows.Forms.Padding(0);
+            this.github.UseDefaultRadiusAndThickness = true;
+            this.github.Click += new System.EventHandler(this.github_Click);
             // 
             // bunifuGradientPanel1
             // 
@@ -1695,11 +2594,11 @@ namespace covid_app
             this.autorzy_button.ColorContrastOnClick = 45;
             this.autorzy_button.ColorContrastOnHover = 45;
             this.autorzy_button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.autorzy_button.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.autorzy_button.CustomizableEdges = borderEdges2;
             this.autorzy_button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.autorzy_button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.autorzy_button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1785,11 +2684,11 @@ namespace covid_app
             this.zakazenia_button.ColorContrastOnClick = 45;
             this.zakazenia_button.ColorContrastOnHover = 45;
             this.zakazenia_button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.zakazenia_button.CustomizableEdges = borderEdges2;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.zakazenia_button.CustomizableEdges = borderEdges3;
             this.zakazenia_button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.zakazenia_button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.zakazenia_button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1870,16 +2769,16 @@ namespace covid_app
             this.mapa_button.BackColor1 = System.Drawing.Color.Transparent;
             this.mapa_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mapa_button.BackgroundImage")));
             this.mapa_button.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.mapa_button.ButtonText = "Mapa";
+            this.mapa_button.ButtonText = "Województwa";
             this.mapa_button.ButtonTextMarginLeft = 0;
             this.mapa_button.ColorContrastOnClick = 45;
             this.mapa_button.ColorContrastOnHover = 45;
             this.mapa_button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.mapa_button.CustomizableEdges = borderEdges3;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.mapa_button.CustomizableEdges = borderEdges4;
             this.mapa_button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.mapa_button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.mapa_button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1965,11 +2864,11 @@ namespace covid_app
             this.zgony_button.ColorContrastOnClick = 45;
             this.zgony_button.ColorContrastOnHover = 45;
             this.zgony_button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.zgony_button.CustomizableEdges = borderEdges4;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.zgony_button.CustomizableEdges = borderEdges5;
             this.zgony_button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.zgony_button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.zgony_button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2055,11 +2954,11 @@ namespace covid_app
             this.szczepienia_button.ColorContrastOnClick = 45;
             this.szczepienia_button.ColorContrastOnHover = 45;
             this.szczepienia_button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.szczepienia_button.CustomizableEdges = borderEdges5;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.szczepienia_button.CustomizableEdges = borderEdges6;
             this.szczepienia_button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.szczepienia_button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.szczepienia_button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2145,11 +3044,11 @@ namespace covid_app
             this.testy_button.ColorContrastOnClick = 45;
             this.testy_button.ColorContrastOnHover = 45;
             this.testy_button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.testy_button.CustomizableEdges = borderEdges6;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.testy_button.CustomizableEdges = borderEdges7;
             this.testy_button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.testy_button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.testy_button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2235,11 +3134,11 @@ namespace covid_app
             this.dashboard_button.ColorContrastOnClick = 45;
             this.dashboard_button.ColorContrastOnHover = 45;
             this.dashboard_button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.dashboard_button.CustomizableEdges = borderEdges7;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.dashboard_button.CustomizableEdges = borderEdges8;
             this.dashboard_button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.dashboard_button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.dashboard_button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -2392,37 +3291,6 @@ namespace covid_app
             this.exit_button.ZoomSpeed = 10;
             this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.dane_z_dnia_mapa);
-            this.panel6.Controls.Add(this.label26);
-            this.panel6.Location = new System.Drawing.Point(39, 22);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(607, 30);
-            this.panel6.TabIndex = 23;
-            // 
-            // dane_z_dnia_mapa
-            // 
-            this.dane_z_dnia_mapa.AutoSize = true;
-            this.dane_z_dnia_mapa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dane_z_dnia_mapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
-            this.dane_z_dnia_mapa.Location = new System.Drawing.Point(326, 7);
-            this.dane_z_dnia_mapa.Name = "dane_z_dnia_mapa";
-            this.dane_z_dnia_mapa.Size = new System.Drawing.Size(50, 16);
-            this.dane_z_dnia_mapa.TabIndex = 1;
-            this.dane_z_dnia_mapa.Text = "label4";
-            // 
-            // label26
-            // 
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(47)))), ((int)(((byte)(251)))));
-            this.label26.Location = new System.Drawing.Point(3, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(573, 30);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Dane z dnia:";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // S
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2446,20 +3314,15 @@ namespace covid_app
             this.panel_dane_z_dnia.ResumeLayout(false);
             this.panel_dane_z_dnia.PerformLayout();
             this.testy_page.ResumeLayout(false);
-            this.zakazenia_page.ResumeLayout(false);
-            this.szczepienia_page.ResumeLayout(false);
-            this.zgony_page.ResumeLayout(false);
-            this.mapa_page.ResumeLayout(false);
-            this.autorzy_page.ResumeLayout(false);
-            this.autorzy_page.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.bunifuShadowPanel9.ResumeLayout(false);
+            this.bunifuShadowPanel8.ResumeLayout(false);
+            this.bunifuShadowPanel7.ResumeLayout(false);
+            this.bunifuShadowPanel6.ResumeLayout(false);
             this.bunifuShadowPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.wykres_testy)).EndInit();
-            this.bunifuShadowPanel6.ResumeLayout(false);
-            this.bunifuShadowPanel7.ResumeLayout(false);
-            this.bunifuShadowPanel8.ResumeLayout(false);
-            this.bunifuShadowPanel9.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.zakazenia_page.ResumeLayout(false);
             this.bunifuShadowPanel10.ResumeLayout(false);
             this.bunifuShadowPanel11.ResumeLayout(false);
             this.bunifuShadowPanel12.ResumeLayout(false);
@@ -2468,6 +3331,7 @@ namespace covid_app
             ((System.ComponentModel.ISupportInitialize)(this.wykres_zakazenia)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.szczepienia_page.ResumeLayout(false);
             this.bunifuShadowPanel15.ResumeLayout(false);
             this.bunifuShadowPanel16.ResumeLayout(false);
             this.bunifuShadowPanel17.ResumeLayout(false);
@@ -2476,6 +3340,7 @@ namespace covid_app
             ((System.ComponentModel.ISupportInitialize)(this.wykres_szczepienia)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.zgony_page.ResumeLayout(false);
             this.bunifuShadowPanel20.ResumeLayout(false);
             this.bunifuShadowPanel21.ResumeLayout(false);
             this.bunifuShadowPanel22.ResumeLayout(false);
@@ -2484,11 +3349,19 @@ namespace covid_app
             ((System.ComponentModel.ISupportInitialize)(this.wykres_zgony)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            this.mapa_page.ResumeLayout(false);
+            this.bunifuShadowPanel26.ResumeLayout(false);
+            this.bunifuShadowPanel26.PerformLayout();
+            this.bunifuShadowPanel25.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.autorzy_page.ResumeLayout(false);
+            this.bunifuShadowPanel29.ResumeLayout(false);
+            this.bunifuShadowPanel28.ResumeLayout(false);
+            this.bunifuShadowPanel27.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2523,7 +3396,6 @@ namespace covid_app
         private System.Windows.Forms.TabPage zgony_page;
         private System.Windows.Forms.TabPage mapa_page;
         private System.Windows.Forms.TabPage autorzy_page;
-        private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuElipse elipse_panel_zakazenia;
         private Bunifu.Framework.UI.BunifuElipse elipse_panel_zgony;
         private Bunifu.Framework.UI.BunifuElipse elipse_panel_testy;
@@ -2613,10 +3485,72 @@ namespace covid_app
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label dane_z_dnia_zgony;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label dane_z_dnia_mapa;
         private System.Windows.Forms.Label label26;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel26;
+        private System.Windows.Forms.Label label13;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel25;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label zgony_podkarpackie;
+        private System.Windows.Forms.Label zgony_malopolskie;
+        private System.Windows.Forms.Label zgony_slaskie;
+        private System.Windows.Forms.Label zgony_opolskie;
+        private System.Windows.Forms.Label zgony_swietokrzyskie;
+        private System.Windows.Forms.Label zgony_lodzkie;
+        private System.Windows.Forms.Label zgony_dolnoslaskie;
+        private System.Windows.Forms.Label zgony_lubelskie;
+        private System.Windows.Forms.Label zgony_mazowieckie;
+        private System.Windows.Forms.Label zgony_kujpom;
+        private System.Windows.Forms.Label zgony_wielkopolskie;
+        private System.Windows.Forms.Label zgony_lubuskie;
+        private System.Windows.Forms.Label zgony_podlaskie;
+        private System.Windows.Forms.Label zgony_warmaz;
+        private System.Windows.Forms.Label zgony_pomorskie;
+        private System.Windows.Forms.Label zgony_zachpom;
+        private System.Windows.Forms.Label zakazenia_podkarpackie;
+        private System.Windows.Forms.Label zakazenia_malopolskie;
+        private System.Windows.Forms.Label zakazenia_slaskie;
+        private System.Windows.Forms.Label zakazenia_opolskie;
+        private System.Windows.Forms.Label zakazenia_swietokrzyskie;
+        private System.Windows.Forms.Label zakazenia_lodzkie;
+        private System.Windows.Forms.Label zakazenia_dolnoslaskie;
+        private System.Windows.Forms.Label zakazenia_lubelskie;
+        private System.Windows.Forms.Label zakazenia_mazowieckie;
+        private System.Windows.Forms.Label zakazenia_kujpom;
+        private System.Windows.Forms.Label zakazenia_wielkopolskie;
+        private System.Windows.Forms.Label zakazenia_lubuskie;
+        private System.Windows.Forms.Label zakazenia_podlaskie;
+        private System.Windows.Forms.Label zakazenia_warmaz;
+        private System.Windows.Forms.Label zakazenia_pomorskie;
+        private System.Windows.Forms.Label zakazenia_zachpom;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label46;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton github;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel29;
+        private System.Windows.Forms.Label label52;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel28;
+        private System.Windows.Forms.Label label50;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel27;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label51;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
     }
 }
 
