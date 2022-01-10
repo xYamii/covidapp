@@ -63,6 +63,16 @@ namespace covid_app.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1099px_POL_location_map_svg {
+            get {
+                object obj = ResourceManager.GetObject("1099px-POL_location_map.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashboard_black {
             get {
                 object obj = ResourceManager.GetObject("dashboard-black", resourceCulture);

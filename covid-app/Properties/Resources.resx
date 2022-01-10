@@ -124,6 +124,9 @@
   <data name="testy_white2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\testy_white2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tworca_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tworca_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="zakazenia_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zakazenia_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,9 +135,6 @@
   </data>
   <data name="map-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\map-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="zakazenia_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zakazenia_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="testy_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\testy_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,16 +166,19 @@
   <data name="zakazenia_white1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zakazenia_white1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="zgony-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zgony-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="testy_black1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\testy_black1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zgony-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zgony-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="zakazenia_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zakazenia_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="test-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\test-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tworca_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tworca_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1099px-POL_location_map.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1099px-POL_location_map.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

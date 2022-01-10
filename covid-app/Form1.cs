@@ -15,19 +15,19 @@ using Newtonsoft.Json.Linq;
 
 namespace covid_app
 {
-    public partial class Form1 : Form
+    public partial class S : Form
     {
         private SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..")) + @"\Database1.mdf; Integrated Security = True;");
         private string APIUrl = "https://koronawirus-api.herokuapp.com/api/covid-vaccinations-tests/daily";
-        public Form1()
+        public S()
         {
             InitializeComponent();
-            this.dane_panelu();
             if (!this.isActual())
             {
 
                 this.getAcutalData();
             };
+            this.dane_panelu();
         }
         private bool isActual()
         {
@@ -44,18 +44,24 @@ namespace covid_app
                 if (dt.Rows.Count > 0)
                 {
                     DataRow row = dt.Rows[0];
-                    string localDate = DateTime.Today.ToString("dd.MM.yyyy");
                     this.con.Close();
-                    label_dashboard_data.Text = row["data"].ToString();
-                    MessageBox.Show("row data: " + row["data"]);
-                    MessageBox.Show("aktualne data: " + localDate);
-                    if (row["data"].ToString() == localDate)
+                    WebRequest wrGETURL = WebRequest.Create(this.APIUrl);
+                    wrGETURL.Method = "GET";
+                    Stream objStream = wrGETURL.GetResponse().GetResponseStream();
+                    StreamReader objReader = new StreamReader(objStream);
+                    string sLine = "";
+                    sLine = objReader.ReadLine();
+                    JObject json = JObject.Parse(sLine);
+                    DateTime data_z_api = DateTime.Parse(json["reportDate"].ToString());
+                    string data_z_api_2 = data_z_api.ToString("dd.MM.yyyy");
+                    label_dashboard_data.Text = data_z_api_2;
+                    if (row["data"].ToString() != data_z_api_2)
                     {
-                        return true;
+                        return false;
                     }
                     else
                     {
-                        return false;
+                        return true;
                     }
                 }
                 else
@@ -79,7 +85,6 @@ namespace covid_app
             StreamReader objReader = new StreamReader(objStream);
             string sLine = "";
             int i = 0;
-
             while (sLine != null)
             {
                 i++;
@@ -91,7 +96,6 @@ namespace covid_app
 
                     this.con.Open();
                     SqlCommand sqlquery = this.con.CreateCommand();
-
                     sqlquery.CommandText = "insert into dbo.[Szczepienia] (data,wszystkie,pierwsza_dawka,druga_dawka) VALUES(@dzisiejsza_data,@wszystkie_dawki,@pierwsza_dawka,@druga_dawka)";
                     sqlquery.Parameters.AddWithValue("@dzisiejsza_data", DateTime.Parse(json["reportDate"].ToString()));
                     sqlquery.Parameters.AddWithValue("@wszystkie_dawki", json["today"]["vaccinations"]["vaccinations"].ToString());
