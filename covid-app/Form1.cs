@@ -55,6 +55,11 @@ namespace covid_app
                     DateTime data_z_api = DateTime.Parse(json["reportDate"].ToString());
                     string data_z_api_2 = data_z_api.ToString("dd.MM.yyyy");
                     label_dashboard_data.Text = data_z_api_2;
+                    label7.Text = data_z_api_2;
+                    label22.Text = data_z_api_2;
+                    label27.Text = data_z_api_2;
+                    dane_z_dnia_zgony.Text = data_z_api_2;
+                    dane_z_dnia_mapa.Text = data_z_api_2;
                     if (row["data"].ToString() != data_z_api_2)
                     {
                         return false;
@@ -132,10 +137,47 @@ namespace covid_app
             string sLine = "";
             sLine = objReader.ReadLine();
             JObject json = JObject.Parse(sLine);
+
+            //dashboard
             testy_panel_label.Text = json["today"]["tests"]["tests"]["all"].ToString();
             zakazenia_panel_label.Text = json["today"]["tests"]["infections"].ToString();
             zgony_panel_label.Text = json["today"]["tests"]["deaths"]["deaths"].ToString();
             szczepienia_panel_label.Text = json["today"]["vaccinations"]["vaccinations"].ToString();
+
+            //dane taba testy
+        }
+
+        private void dane_testow()
+        {
+            string sql = "select * from Testy where FORMAT(data,'yyyy-MM-dd') = FORMAT(DATEADD(day,-7,GETDATE()), 'yyyy-MM-dd') union select * from Testy where FORMAT(data,'yyyy-MM-dd') = FORMAT(DATEADD(day,-1,GETDATE()), 'yyyy-MM-dd') order by id desc;";
+            SqlCommand sqlquery = this.con.CreateCommand();
+            this.con.Open();
+            sqlquery.CommandText = sql;
+            try
+            {
+                sqlquery.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(sqlquery);
+                da.Fill(dt);
+                //row["data"].ToString();
+
+
+                WebRequest wrGETURL = WebRequest.Create(this.APIUrl);
+                wrGETURL.Method = "GET";
+                Stream objStream = wrGETURL.GetResponse().GetResponseStream();
+                StreamReader objReader = new StreamReader(objStream);
+                string sLine = "";
+                sLine = objReader.ReadLine();
+                JObject json = JObject.Parse(sLine);
+                testy_dzis.Text = json["today"]["tests"]["tests"]["all"].ToString();
+                zakazenia_panel_label.Text = json["today"]["tests"]["infections"].ToString();
+                zgony_panel_label.Text = json["today"]["tests"]["deaths"]["deaths"].ToString();
+                szczepienia_panel_label.Text = json["today"]["vaccinations"]["vaccinations"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
