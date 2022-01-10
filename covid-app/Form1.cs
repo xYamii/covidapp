@@ -15,11 +15,11 @@ using Newtonsoft.Json.Linq;
 
 namespace covid_app
 {
-    public partial class Form1 : Form
+    public partial class S : Form
     {
         private SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..")) + @"\Database1.mdf; Integrated Security = True;");
         private string APIUrl = "https://koronawirus-api.herokuapp.com/api/covid-vaccinations-tests/daily";
-        public Form1()
+        public S()
         {
             InitializeComponent();
             if (!this.isActual())
