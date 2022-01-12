@@ -12,6 +12,7 @@ using System.Net;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace covid_app
 {
@@ -28,6 +29,9 @@ namespace covid_app
                 this.getAcutalData();
             };
             this.dane_panelu();
+            this.dane_testow();
+            this.dane_zakazen();
+            this.dane_szczepien();
         }
         private bool isActual()
         {
@@ -55,6 +59,11 @@ namespace covid_app
                     DateTime data_z_api = DateTime.Parse(json["reportDate"].ToString());
                     string data_z_api_2 = data_z_api.ToString("dd.MM.yyyy");
                     label_dashboard_data.Text = data_z_api_2;
+                    label7.Text = data_z_api_2;
+                    label22.Text = data_z_api_2;
+                    label27.Text = data_z_api_2;
+                    dane_z_dnia_zgony.Text = data_z_api_2;
+                    dane_z_dnia_mapa.Text = data_z_api_2;
                     if (row["data"].ToString() != data_z_api_2)
                     {
                         return false;
@@ -132,10 +141,233 @@ namespace covid_app
             string sLine = "";
             sLine = objReader.ReadLine();
             JObject json = JObject.Parse(sLine);
+
+            //dashboard
             testy_panel_label.Text = json["today"]["tests"]["tests"]["all"].ToString();
             zakazenia_panel_label.Text = json["today"]["tests"]["infections"].ToString();
             zgony_panel_label.Text = json["today"]["tests"]["deaths"]["deaths"].ToString();
             szczepienia_panel_label.Text = json["today"]["vaccinations"]["vaccinations"].ToString();
+
+            //dane taba testy
+        }
+
+        private void dane_testow()
+        {
+            string sql = "select wszystkie, format(data,'dd-MM') as data from Testy where FORMAT(data,'yyyy-MM-dd') >= FORMAT(DATEADD(day,-7,GETDATE()), 'yyyy-MM-dd') and FORMAT(data,'yyyy-MM-dd') <= FORMAT(GETDATE(), 'yyyy-MM-dd') ORDER BY Id desc";
+            SqlCommand sqlquery = this.con.CreateCommand();
+            this.con.Open();
+            sqlquery.CommandText = sql;
+            try
+            {
+                sqlquery.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(sqlquery);
+                da.Fill(dt);
+                //row["data"].ToString();
+                float testy_procent;
+                int wszystkie_testy = 0;
+                int[] testy = new int[8];
+                string[] daty = new string[8];
+                int i = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+                    wszystkie_testy += Int32.Parse(row["wszystkie"].ToString());
+                    testy[i] = Int32.Parse(row["wszystkie"].ToString());
+                    daty[i] = row["data"].ToString();
+                    i++;
+                }
+                testy_dzis.Text = testy[0].ToString();
+                testy_wczoraj.Text = testy[1].ToString();
+                testy_tydzien_temu.Text = testy[7].ToString();
+                float t_tydzien_temu = testy[7];
+                float t_dzis = testy[0];
+
+                //tutaj spadek/wzrost testów z t/t
+                if (t_tydzien_temu > t_dzis)
+                {
+                    testy_procent = (((t_tydzien_temu - t_dzis) / t_dzis) * 100);
+                    info_spadek_wzrost_testy.ForeColor = Color.Green;
+                    info_spadek_wzrost_testy.Text = "spadek o: " + Math.Round(testy_procent, 2) + "%";
+
+                }
+                else
+                {
+                    testy_procent = (((t_dzis - t_tydzien_temu) / t_tydzien_temu) * 100);
+                    info_spadek_wzrost_testy.ForeColor = Color.Red;
+                    info_spadek_wzrost_testy.Text = "wzrost o: " + Math.Round(testy_procent, 2) + "%";
+
+                }
+                //nazwa wykresu: wykres_testy
+                try
+                {
+                    Series wykres_t = wykres_testy.Series.Add("Testy");
+                    wykres_testy.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                    wykres_testy.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+                    wykres_t.Color = Color.FromArgb(134, 75, 243);
+
+                    for (int j = 7; j >= 0; j--)
+                    {
+                        wykres_t.Points.AddXY(daty[j], testy[j]);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+                this.con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void dane_zakazen()
+        {
+            string sql = "select nowe_zakazenia, format(data,'dd-MM') as data from Zakazenia where FORMAT(data,'yyyy-MM-dd') >= FORMAT(DATEADD(day,-7,GETDATE()), 'yyyy-MM-dd') and FORMAT(data,'yyyy-MM-dd') <= FORMAT(GETDATE(), 'yyyy-MM-dd') ORDER BY Id desc";
+            SqlCommand sqlquery = this.con.CreateCommand();
+            sqlquery.CommandText = sql;
+            this.con.Open();
+            try
+            {
+                sqlquery.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(sqlquery);
+                da.Fill(dt);
+                //row["data"].ToString();
+                float zakazenia_procent;
+                int wszystkie_testy = 0;
+                int[] zakazenia = new int[8];
+                string[] daty = new string[8];
+                int i = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+                    wszystkie_testy += Int32.Parse(row["nowe_zakazenia"].ToString());
+                    zakazenia[i] = Int32.Parse(row["nowe_zakazenia"].ToString());
+                    daty[i] = row["data"].ToString();
+                    i++;
+                }
+                zakazenia_dzis.Text = zakazenia[0].ToString();
+                zakazenia_wczoraj.Text = zakazenia[1].ToString();
+                zakazenia_tydzien_temu.Text = zakazenia[7].ToString();
+                float z_tydzien_temu = zakazenia[7];
+                float z_dzis = zakazenia[0];
+
+                //tutaj spadek/wzrost zakazen z t/t
+                if (z_tydzien_temu > z_dzis)
+                {
+                    zakazenia_procent = (((z_tydzien_temu - z_dzis) / z_dzis) * 100);
+                    info_spadek_wzrost_zakazenia.ForeColor = Color.Green;
+                    info_spadek_wzrost_zakazenia.Text = "spadek o: " + Math.Round(zakazenia_procent, 2) + "%";
+
+                }
+                else
+                {
+                    zakazenia_procent = (((z_dzis - z_tydzien_temu) / z_tydzien_temu) * 100);
+                    info_spadek_wzrost_zakazenia.ForeColor = Color.Red;
+                    info_spadek_wzrost_zakazenia.Text = "wzrost o: " + Math.Round(zakazenia_procent, 2) + "%";
+
+                }
+                //nazwa wykresu: wykres_zakazenia
+                try
+                {
+                    Series wykres_z = wykres_zakazenia.Series.Add("Zakazenia");
+                    wykres_zakazenia.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                    wykres_zakazenia.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+                    wykres_z.Color = Color.FromArgb(134, 75, 243);
+
+                    for (int j = 7; j >= 0; j--)
+                    {
+                        wykres_z.Points.AddXY(daty[j], zakazenia[j]);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+                this.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void dane_szczepien()
+        {
+            string sql = "select wszystkie, format(data,'dd-MM') as data from Szczepienia where FORMAT(data,'yyyy-MM-dd') >= FORMAT(DATEADD(day,-7,GETDATE()), 'yyyy-MM-dd') and FORMAT(data,'yyyy-MM-dd') <= FORMAT(GETDATE(), 'yyyy-MM-dd') ORDER BY Id desc";
+            SqlCommand sqlquery = this.con.CreateCommand();
+            sqlquery.CommandText = sql;
+            this.con.Open();
+            try
+            {
+                sqlquery.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(sqlquery);
+                da.Fill(dt);
+                //row["data"].ToString();
+                float szczepienia_procent;
+                int wszystkie_szczepienia = 0;
+                int[] szczepienia = new int[8];
+                string[] daty = new string[8];
+                int i = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+
+                    wszystkie_szczepienia += Int32.Parse(row["wszystkie"].ToString());
+                    szczepienia[i] = Int32.Parse(row["wszystkie"].ToString());
+                    daty[i] = row["data"].ToString();
+                    i++;
+                }
+                szczepienia_dzis.Text = szczepienia[0].ToString();
+                szczepienia_wczoraj.Text = szczepienia[1].ToString();
+                szczepienia_tydzien_temu.Text = szczepienia[7].ToString();
+                float z_tydzien_temu = szczepienia[7];
+                float z_dzis = szczepienia[0];
+
+                //tutaj spadek/wzrost szczepien z t/t
+                if (z_tydzien_temu > z_dzis)
+                {
+                    szczepienia_procent = (((z_tydzien_temu - z_dzis) / z_dzis) * 100);
+                    info_spadek_wzrost_szczepienia.ForeColor = Color.Green;
+                    info_spadek_wzrost_szczepienia.Text = "spadek o: " + Math.Round(szczepienia_procent, 2) + "%";
+
+                }
+                else
+                {
+                    szczepienia_procent = (((z_dzis - z_tydzien_temu) / z_tydzien_temu) * 100);
+                    info_spadek_wzrost_szczepienia.ForeColor = Color.Red;
+                    info_spadek_wzrost_szczepienia.Text = "wzrost o: " + Math.Round(szczepienia_procent, 2) + "%";
+
+                }
+
+
+                //nazwa wykresu: wykres_szczepienia
+                try
+                {
+                    Series wykres_s = wykres_szczepienia.Series.Add("Szczepienia");
+                    wykres_szczepienia.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                    wykres_szczepienia.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+                    wykres_s.Color = Color.FromArgb(134, 75, 243);
+
+                    for (int j = 7; j >= 0; j--)
+                    {
+                        wykres_s.Points.AddXY(daty[j], szczepienia[j]);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                    MessageBox.Show("gowno");
+                }
+                this.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -194,6 +426,11 @@ namespace covid_app
         {
             pages.SelectedTab = autorzy_page;
             autorzy_button.Focus();
+        }
+
+        private void github_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/xYamii/covidapp");
         }
     }
 }
