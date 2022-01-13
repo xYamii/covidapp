@@ -400,7 +400,7 @@ namespace covid_app
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(200, 538);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(167, 538);
             this.bunifuGradientPanel1.TabIndex = 3;
             // 
             // autorzy_button
@@ -1041,7 +1041,7 @@ namespace covid_app
             this.bunifuPictureBox1.BorderRadius = 80;
             this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(16, -20);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(-1, -20);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(161, 161);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1100,10 +1100,10 @@ namespace covid_app
             this.pages.Location = new System.Drawing.Point(215, 54);
             this.pages.Multiline = true;
             this.pages.Name = "pages";
-            this.pages.Page = this.mapa_page;
-            this.pages.PageIndex = 5;
-            this.pages.PageName = "mapa_page";
-            this.pages.PageTitle = "S";
+            this.pages.Page = this.zgony_page;
+            this.pages.PageIndex = 4;
+            this.pages.PageName = "zgony_page";
+            this.pages.PageTitle = "zgony_page";
             this.pages.SelectedIndex = 0;
             this.pages.Size = new System.Drawing.Size(696, 484);
             this.pages.TabIndex = 5;
@@ -3301,9 +3301,10 @@ namespace covid_app
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "S";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Koronawirus w Polsce";
             this.panel1.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
