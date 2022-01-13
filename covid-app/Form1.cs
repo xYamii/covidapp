@@ -32,6 +32,8 @@ namespace covid_app
             this.dane_testow();
             this.dane_zakazen();
             this.dane_szczepien();
+            this.dane_zgonow();
+            this.wczytaj_wojewodztwa();
         }
         private bool isActual()
         {
@@ -370,6 +372,118 @@ namespace covid_app
             }
         }
 
+        private void dane_zgonow()
+        {
+            string sql = "select nowe_zgony, format(data,'dd-MM') as data from Zakazenia where FORMAT(data,'yyyy-MM-dd') >= FORMAT(DATEADD(day,-7,GETDATE()), 'yyyy-MM-dd') and FORMAT(data,'yyyy-MM-dd') <= FORMAT(GETDATE(), 'yyyy-MM-dd') ORDER BY Id desc";
+            SqlCommand sqlquery = this.con.CreateCommand();
+            sqlquery.CommandText = sql;
+            this.con.Open();
+            try
+            {
+                sqlquery.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(sqlquery);
+                da.Fill(dt);
+                //row["data"].ToString();
+                float zgony_procent;
+                int wszystkie_zgony = 0;
+                int[] zgony = new int[8];
+                string[] daty = new string[8];
+                int i = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+
+                    wszystkie_zgony += Int32.Parse(row["nowe_zgony"].ToString());
+                    zgony[i] = Int32.Parse(row["nowe_zgony"].ToString());
+                    daty[i] = row["data"].ToString();
+                    i++;
+                }
+                zgony_dzis.Text = zgony[0].ToString();
+                zgony_wczoraj.Text = zgony[1].ToString();
+                zgony_tydzien_temu.Text = zgony[7].ToString();
+                float z_tydzien_temu = zgony[7];
+                float z_dzis = zgony[0];
+
+                //tutaj spadek/wzrost szczepien z t/t
+                if (z_tydzien_temu > z_dzis)
+                {
+                    zgony_procent = (((z_tydzien_temu - z_dzis) / z_dzis) * 100);
+                    info_spadek_wzrost_zgony.ForeColor = Color.Green;
+                    info_spadek_wzrost_zgony.Text = "spadek o: " + Math.Round(zgony_procent, 2) + "%";
+
+                }
+                else
+                {
+                    zgony_procent = (((z_dzis - z_tydzien_temu) / z_tydzien_temu) * 100);
+                    info_spadek_wzrost_zgony.ForeColor = Color.Red;
+                    info_spadek_wzrost_zgony.Text = "wzrost o: " + Math.Round(zgony_procent, 2) + "%";
+
+                }
+
+
+                //nazwa wykresu: wykres_szczepienia
+                try
+                {
+                    Series wykres_s = wykres_zgony.Series.Add("Zgony");
+                    wykres_zgony.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                    wykres_zgony.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+                    wykres_s.Color = Color.FromArgb(134, 75, 243);
+
+                    for (int j = 7; j >= 0; j--)
+                    {
+                        wykres_s.Points.AddXY(daty[j], zgony[j]);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                    MessageBox.Show("gowno");
+                }
+                this.con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+        private void wczytaj_wojewodztwa()
+        {
+            Dictionary<string,  string> wojewodztwa = new Dictionary<string, string>();
+            wojewodztwa.Add("podkarpackie", "podkarpackie");
+            wojewodztwa.Add("małopolskie", "malopolskie");
+            wojewodztwa.Add("śląskie", "slaskie");
+            wojewodztwa.Add("opolskie", "opolskie");
+            wojewodztwa.Add("świętokrzyskie", "swietokrzyskie");
+            wojewodztwa.Add("łódzkie", "lodzkie");
+            wojewodztwa.Add("dolnośląskie", "dolnoslaskie");
+            wojewodztwa.Add("lubelskie", "lubelskie");
+            wojewodztwa.Add("mazowieckie", "mazowieckie");
+            wojewodztwa.Add("kujawsko-pomorskie", "kujpom");
+            wojewodztwa.Add("wielkopolskie", "wielkopolskie");
+            wojewodztwa.Add("lubuskie", "lubuskie");
+            wojewodztwa.Add("podlaskie", "podlaskie");
+            wojewodztwa.Add("warmińsko-mazurskie", "warmaz");
+            wojewodztwa.Add("pomorskie", "pomorskie");
+            wojewodztwa.Add("zachodniopomorskie", "zachpom");
+
+            WebRequest wrGETURL = WebRequest.Create("https://koronawirus-api.herokuapp.com/api/covid19/province");
+            wrGETURL.Method = "GET";
+            Stream objStream = wrGETURL.GetResponse().GetResponseStream();
+            StreamReader objReader = new StreamReader(objStream);
+            string sLine = "";
+            sLine = objReader.ReadLine();
+            JArray json = JArray.Parse(sLine);
+            for  (int i  =  0;  i  <  16; i++)
+            {
+                JObject data = JObject.Parse(json[i].ToString());
+                Label label = Controls.Find($"zgony_{wojewodztwa[data["province"].ToString()]}", true).OfType<Label>().FirstOrDefault();
+                label.Text = data["today"]["deaths"]["deaths"].ToString();
+                label = Controls.Find($"zakazenia_{wojewodztwa[data["province"].ToString()]}", true).OfType<Label>().FirstOrDefault();
+                label.Text = data["today"]["infections"].ToString();
+            }
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
