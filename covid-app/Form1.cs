@@ -361,7 +361,7 @@ namespace covid_app
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message.ToString());
-                    MessageBox.Show("gowno");
+                    MessageBox.Show("Błąd!");
                 }
                 this.con.Close();
 
@@ -437,7 +437,7 @@ namespace covid_app
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message.ToString());
-                    MessageBox.Show("gowno");
+                    MessageBox.Show("Błąd!");
                 }
                 this.con.Close();
 
@@ -449,7 +449,7 @@ namespace covid_app
         }
         private void wczytaj_wojewodztwa()
         {
-            Dictionary<string,  string> wojewodztwa = new Dictionary<string, string>();
+            Dictionary<string, string> wojewodztwa = new Dictionary<string, string>();
             wojewodztwa.Add("podkarpackie", "podkarpackie");
             wojewodztwa.Add("małopolskie", "malopolskie");
             wojewodztwa.Add("śląskie", "slaskie");
@@ -474,7 +474,7 @@ namespace covid_app
             string sLine = "";
             sLine = objReader.ReadLine();
             JArray json = JArray.Parse(sLine);
-            for  (int i  =  0;  i  <  16; i++)
+            for (int i = 0; i < 16; i++)
             {
                 JObject data = JObject.Parse(json[i].ToString());
                 Label label = Controls.Find($"zgony_{wojewodztwa[data["province"].ToString()]}", true).OfType<Label>().FirstOrDefault();
